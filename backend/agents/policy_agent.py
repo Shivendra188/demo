@@ -1,15 +1,15 @@
 from langchain_core.prompts import PromptTemplate
 from langchain_groq import ChatGroq
 from services.pdf_parser import read_policy_pdf
-
+import os
 # Load policy text once (fast)
 POLICY_TEXT = read_policy_pdf(
     "policy.pdf"
 )
 
 llm = ChatGroq(
-    api_key="sk_test_XXXXXXXXXXXXXXXXXXXXXX",
-    model="llama-3.1-70b-versatile"
+    groq_api_key=os.getenv("GROQ_API_KEY"),
+    model_name="llama-3.1-8b-instant"
 )
 
 POLICY_PROMPT = PromptTemplate(

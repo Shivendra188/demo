@@ -4,6 +4,10 @@ from pydantic import BaseModel
 from typing import Dict
 from datetime import date
 import os
+from dotenv import load_dotenv
+
+# Load environment variables
+load_dotenv()
 
 # ===== Agents =====
 from agents.supervisor import route_task
@@ -60,23 +64,10 @@ def chat(request: ChatRequest):
 
     return {"error": "Could not understand request"}
 
-<<<<<<< HEAD
-supabase = create_client("https://ljepgqjlwtvxotzgdikp.supabase.co", "sb_publishable_FJWN3AMGacjf45jCfhVyAA_ZrAUmQGg")
-  
-@app.get("/crm-dashboard")
-def crm_dashboard() -> Dict:
-    """CRM data: JOIN policies + customers."""
-    data = supabase.table("policies").select("""
-        *,
-        customers(name, phone)
-    """).limit(50).execute().data
-
-    today = date.today()
-=======
-# ===== Supabase =====
+# ===== Supabase (SECURE) =====
 supabase = create_client(
-    os.getenv("https://ljepgqjlwtvxotzgdikp.supabase.com"),
-    os.getenv("sb_publishable_FJWN3AMGacjf45jCfhVyAA_ZrAUmQGg")
+    os.getenv("SUPABASE_URL"),
+    os.getenv("SUPABASE_KEY")
 )
 
 # ===== CRM Dashboard =====
@@ -89,46 +80,32 @@ def crm_dashboard() -> Dict:
         .execute()
         .data
     )
->>>>>>> fd79aeb (policy)
 
+    today = date.today()
     table_data = []
+
     for row in data:
-        # Simple status logic (you can adjust)
-        expiry_str = row["policy_expiry"]
-        status = row.get("status")
-        if not status:
-            status = "Active"
-            if expiry_str < str(today):
-                status = "Expired"
+        expiry = row["policy_expiry"]
+        status = row.get("status", "Active")
+
+        if expiry < str(today):
+            status = "Expired"
 
         table_data.append({
             "name": row["customers"]["name"],
-<<<<<<< HEAD
-            "phone": row["customers"]["phone"],
-            "policy_type": row["policy_type"],
-            "policy_id": row["policy_id"],
-            "expiry": row["policy_expiry"],
-            "premium": row.get("premium"),
-            "status": status,
-=======
             "policy": f"{row['policy_type']} ({row['policy_id']})",
-            "expiry": row["policy_expiry"],
+            "expiry": expiry,
             "premium": f"₹{int(row.get('premium', 0)):,}",
-            "status": row.get("status", "Active")
->>>>>>> fd79aeb (policy)
+            "status": status
         })
 
     return {
         "data": table_data,
         "total": len(table_data),
-        "updated": str(today),
+        "updated": str(today)
     }
 
-<<<<<<< HEAD
-
-=======
 # ===== Customers =====
->>>>>>> fd79aeb (policy)
 @app.get("/customers")
 def get_customers(limit: int = 10):
     return supabase.table("customers").select("*").limit(limit).execute().data
