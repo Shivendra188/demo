@@ -13,7 +13,7 @@ load_dotenv()
 from agents.supervisor import route_task
 from agents.quote_agent import generate_quote
 from agents.policy_agent import handle_policy_query
-from agents.reminder_agent import send_renewal_reminder
+from agents.reminder_agent import send_renewal_reminder, run_reminder_agent
 from agents.crm_agent import update_crm
 
 # ===== Services =====
@@ -61,7 +61,7 @@ def chat(request: ChatRequest):
         return {"response": result, "task_type": "REMINDER"}
 
     if task == "CRM":
-        return update_crm(request.dict())
+        return {"response": result, "task_type": "CRM"}
 
     return {"error": "Could not understand request"}
 
@@ -155,3 +155,13 @@ def batch_reminders():
         results.append(p["policy_id"])
 
     return {"sent_to": len(results), "policies": results}
+
+
+#crm
+
+@app.post("/crm")
+def crm_endpoint(request: dict):
+    user_input = request["message"]
+    result = run_crm_agent(user_input)
+    return {"response": result, "task_type": "CRM"}
+ 

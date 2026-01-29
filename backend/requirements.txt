@@ -8,4 +8,5 @@ langchain
 langchain-groq
 supabase
 pydantic
-fitz
+PyMuPDF
+langchain_openai

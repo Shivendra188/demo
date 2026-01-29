@@ -14,7 +14,7 @@ def reminder_tool(customer_id: str = None) -> str:
     result = send_renewal_reminder(customer_id)
     
     if result["status"] == "no_targets":
-        return "ℹ️ No expiring policies found (within 30 days)."
+        return "ℹ No expiring policies found (within 30 days)."
     
     return f"""
 Reminder Agent Complete!
