@@ -57,7 +57,8 @@ def chat(request: ChatRequest):
         return handle_policy_query(request.message)
 
     if task == "REMINDER":
-        return send_renewal_reminder()
+        result = run_reminder_agent(request.message)
+        return {"response": result, "task_type": "REMINDER"}
 
     if task == "CRM":
         return update_crm(request.dict())

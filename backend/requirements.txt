@@ -6,3 +6,6 @@ pinecone-client
 sentence-transformers
 langchain
 langchain-groq
+supabase
+pydantic
+fitz
