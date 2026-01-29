@@ -2,6 +2,7 @@ from langchain_core.tools import tool
 from pydantic import BaseModel, Field, validator
 from typing import Optional
 from supabase import create_client
+import os
 
 supabase = create_client(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
 

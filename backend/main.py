@@ -14,7 +14,7 @@ from agents.supervisor import route_task
 from agents.quote_agent import generate_quote
 from agents.policy_agent import handle_policy_query
 from agents.reminder_agent import send_renewal_reminder, run_reminder_agent
-from agents.crm_agent import update_crm
+from agents.crm_agent import update_crm, run_crm_agent
 
 # ===== Services =====
 from services.whatsapp import send_whatsapp_message

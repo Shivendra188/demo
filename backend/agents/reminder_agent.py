@@ -1,6 +1,8 @@
 from langchain_openai import ChatOpenAI
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain.agents import create_openai_functions_agent, AgentExecutor
+from langchain.agents import create_tool_calling_agent
+from langchain.agents import AgentExecutor
 from langchain_core.messages import HumanMessage
 from tools.reminder import reminder_tool
 
