@@ -1,0 +1,191 @@
+/* =========================
+   DESIGN TOKENS
+========================= */
+:root {
+  --bg-main: radial-gradient(circle at top, #0b1220, #020617);
+  --bg-card: rgba(2, 6, 23, 0.85);
+  --bg-soft: rgba(15, 23, 42, 0.7);
+
+  --accent-gold: #fbbf24;
+  --accent-emerald: #22c55e;
+  --accent-red: #ef4444;
+
+  --text-main: #e5e7eb;
+  --text-muted: #94a3b8;
+  --border-soft: rgba(251, 191, 36, 0.25);
+
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.55;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: var(--text-main);
+  background: var(--bg-main);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* =========================
+   GLOBAL RESET
+========================= */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+h1, h2, h3, h4 {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+p {
+  color: var(--text-muted);
+}
+
+/* =========================
+   LINKS
+========================= */
+a {
+  font-weight: 500;
+  color: var(--accent-gold);
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.85;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+button {
+  border-radius: 10px;
+  border: 1px solid var(--border-soft);
+  padding: 0.6em 1.2em;
+  font-size: 0.95em;
+  font-weight: 500;
+  font-family: inherit;
+  background: linear-gradient(135deg, #1e293b, #020617);
+  color: var(--text-main);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 14px rgba(251, 191, 36, 0.25);
+  transform: translateY(-1px);
+}
+
+button:focus,
+button:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.4);
+}
+
+/* =========================
+   INPUTS
+========================= */
+input,
+select {
+  background: #020617;
+  border: 1px solid var(--border-soft);
+  border-radius: 10px;
+  padding: 10px 12px;
+  color: var(--text-main);
+  font-size: 0.9rem;
+}
+
+input::placeholder {
+  color: var(--text-muted);
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 0 2px rgba(251, 191, 36, 0.35);
+}
+
+/* =========================
+   CARDS (DASHBOARD)
+========================= */
+.card {
+  background: var(--bg-card);
+  border-radius: 18px;
+  padding: 16px;
+  border: 1px solid var(--border-soft);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* =========================
+   TABLES
+========================= */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  color: var(--accent-gold);
+  font-weight: 600;
+}
+
+td {
+  color: var(--text-main);
+}
+
+tr:hover {
+  background: rgba(251, 191, 36, 0.06);
+}
+
+/* =========================
+   STATUS COLORS
+========================= */
+.status-active {
+  background: rgba(34, 197, 94, 0.2);
+  color: var(--accent-emerald);
+}
+
+.status-pending {
+  background: rgba(251, 191, 36, 0.2);
+  color: var(--accent-gold);
+}
+
+.status-expired {
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--accent-red);
+}
+
+/* =========================
+   SMOOTH FEEL
+========================= */
+* {
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}

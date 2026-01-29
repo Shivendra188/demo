@@ -1,0 +1,5002 @@
+[
+    {
+        "quote_id":"Q0001",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b912662\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0002",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b913341\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0003",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b95285\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0004",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b98736\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0005",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b916567\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0006",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b921717\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0007",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b97899\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0008",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b912444\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0009",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b912761\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0010",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b910288\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0011",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b913075\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0012",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b923401\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0013",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b911826\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0014",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b98872\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0015",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b98461\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0016",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b921746\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0017",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b913316\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0018",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b910597\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0019",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b911126\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0020",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b913973\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0021",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b915198\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0022",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b910429\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0023",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b98525\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0024",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b98609\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0025",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b915189\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0026",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b911036\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0027",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b914064\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0028",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b912151\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0029",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b913466\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0030",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b920731\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0031",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b913828\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0032",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b97000\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0033",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b914314\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0034",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b924759\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0035",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b924596\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0036",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b97562\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0037",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b918797\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0038",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b96624\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0039",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b95469\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0040",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b99227\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0041",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b915683\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0042",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b914914\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0043",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b99206\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0044",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b98602\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0045",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b912977\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0046",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b911008\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0047",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b916201\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0048",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b917351\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0049",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b913326\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0050",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b918790\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0051",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b910162\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0052",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b918372\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0053",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b915388\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0054",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b95513\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0055",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b914749\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0056",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b918791\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0057",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b98227\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0058",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b911250\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0059",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b910318\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0060",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b99407\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0061",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b913062\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0062",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b924817\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0063",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b98276\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0064",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b99891\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0065",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b99644\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0066",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b95548\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0067",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b913931\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0068",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b912107\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0069",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b911170\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0070",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b911866\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0071",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b913068\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0072",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b912390\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0073",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b97200\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0074",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b910784\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0075",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b97468\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0076",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b912576\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0077",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b916960\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0078",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b918632\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0079",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b914846\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0080",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b914704\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0081",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b910940\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0082",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b911034\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0083",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b99475\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0084",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b97472\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0085",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b96584\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0086",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b910966\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0087",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b95538\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0088",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b911238\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0089",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b914387\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0090",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b917777\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0091",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b914002\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0092",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b918967\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0093",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b914721\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0094",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b95475\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0095",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b98280\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0096",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b915648\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0097",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b95062\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0098",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b98126\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0099",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b94481\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0100",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b913130\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0101",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b924175\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0102",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b97692\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0103",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b912405\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0104",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b99146\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0105",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b913293\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0106",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b97491\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0107",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b911093\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0108",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b919640\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0109",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b99780\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0110",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b911326\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0111",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b919668\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0112",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b919586\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0113",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b920107\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0114",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b916594\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0115",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b912497\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0116",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b99316\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0117",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b94521\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0118",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b98572\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0119",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b912946\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0120",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b911796\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0121",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b94161\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0122",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b911078\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0123",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b915527\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0124",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b98629\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0125",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b913361\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0126",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b910338\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0127",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b910901\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0128",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b918212\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0129",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b920851\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0130",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b98783\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0131",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b916524\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0132",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b99402\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0133",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b94798\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0134",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b920512\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0135",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b913404\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0136",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b923453\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0137",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b913426\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0138",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b914607\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0139",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b99976\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0140",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b911462\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0141",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b910048\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0142",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b97397\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0143",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b914699\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0144",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b910996\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0145",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b913822\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0146",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b919335\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0147",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b913257\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0148",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b919226\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0149",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b911059\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0150",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b915698\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0151",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b917127\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0152",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b911750\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0153",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b913042\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0154",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b910925\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0155",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b914191\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0156",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b913534\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0157",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b910651\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0158",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b98185\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0159",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b99697\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0160",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b919128\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0161",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b914944\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0162",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b99662\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0163",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b915055\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0164",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b95835\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0165",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b915811\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0166",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b916465\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0167",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b912574\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0168",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b914552\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0169",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b912373\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0170",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b96944\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0171",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b918745\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0172",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b914172\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0173",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b913354\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0174",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b910822\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0175",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b98195\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0176",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b915968\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0177",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b95024\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0178",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b914012\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0179",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b917153\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0180",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b94757\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0181",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b913521\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0182",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b98983\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0183",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b913780\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0184",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b918845\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0185",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b919516\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0186",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b913239\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0187",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b914347\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0188",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b921242\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0189",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b912210\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0190",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b916118\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0191",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b95023\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0192",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b918889\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0193",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b924745\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0194",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b923747\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0195",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b919196\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0196",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b916442\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0197",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b913357\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0198",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b99434\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0199",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b913642\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0200",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b98176\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0201",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b99518\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0202",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b913955\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0203",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b912377\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0204",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b96656\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0205",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b911034\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0206",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b97714\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0207",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b917439\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0208",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b917345\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0209",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b911353\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0210",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b920436\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0211",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b916796\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0212",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b98850\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0213",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b921199\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0214",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b911587\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0215",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b922088\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0216",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b99148\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0217",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b96620\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0218",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b910478\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0219",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b97621\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0220",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b914304\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0221",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b95505\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0222",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b99380\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0223",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b99874\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0224",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b99187\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0225",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b914382\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0226",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b910834\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0227",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b97684\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0228",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b916840\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0229",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b99584\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0230",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b912755\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0231",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b913500\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0232",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b914588\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0233",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b919606\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0234",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b97684\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0235",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b910806\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0236",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b915744\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0237",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b910665\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0238",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b96900\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0239",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b913589\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0240",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b916295\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0241",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b910118\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0242",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b916102\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0243",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b97795\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0244",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b98116\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0245",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b917348\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0246",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b911290\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0247",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b914900\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0248",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b913798\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0249",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b924779\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0250",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b96483\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0251",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b924530\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0252",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b914223\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0253",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b910884\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0254",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b916469\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0255",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b915594\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0256",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b917412\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0257",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b912172\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0258",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b96307\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0259",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b917098\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0260",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b98116\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0261",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b915979\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0262",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b94589\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0263",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b916667\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0264",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b912904\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0265",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b913200\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0266",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b911021\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0267",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b913788\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0268",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b97280\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0269",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b919380\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0270",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b916925\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0271",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b922112\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0272",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b911458\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0273",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b910978\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0274",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b917114\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0275",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b916033\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0276",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b923282\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0277",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b918424\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0278",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b96594\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0279",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b911417\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0280",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b914803\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0281",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b911341\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0282",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b910645\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0283",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b920946\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0284",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b98405\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0285",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b910537\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0286",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b924687\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0287",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b94701\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0288",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b913452\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0289",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b96832\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0290",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b914967\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0291",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b96533\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0292",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b96942\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0293",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b911134\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0294",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b922945\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0295",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b923720\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0296",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b914509\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0297",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b921955\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0298",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b921041\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0299",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b913389\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0300",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b914121\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0301",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b94807\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0302",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b99551\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0303",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b914004\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0304",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b96991\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0305",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b919199\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0306",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b914966\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0307",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b915542\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0308",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b910014\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0309",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b910646\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0310",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b918616\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0311",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b917618\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0312",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b94551\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0313",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b914938\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0314",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b913297\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0315",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b915825\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0316",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b99850\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0317",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b918913\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0318",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b919570\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0319",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b922555\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0320",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b910115\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0321",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b97557\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0322",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b924727\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0323",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b99531\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0324",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b911733\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0325",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b916339\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0326",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b919178\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0327",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b99961\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0328",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b94324\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0329",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b918265\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0330",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b97371\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0331",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b914802\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0332",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b99783\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0333",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b912978\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0334",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b915712\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0335",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b913648\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0336",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b912682\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0337",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b915309\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0338",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b98958\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0339",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b95223\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0340",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b919163\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0341",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b911923\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0342",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b99284\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0343",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b919656\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0344",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b918035\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0345",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b921909\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0346",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b922210\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0347",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b924860\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0348",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b915732\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0349",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b922517\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0350",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b914642\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0351",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b98663\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0352",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b913395\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0353",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b914871\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0354",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b920039\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0355",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b912616\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0356",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b923175\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0357",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b915075\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0358",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b911037\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0359",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b99807\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0360",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b915355\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0361",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b910235\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0362",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b920216\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0363",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b920769\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0364",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b918587\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0365",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b912666\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0366",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b911308\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0367",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b910331\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0368",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b99338\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0369",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b913472\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0370",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b915330\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0371",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b914895\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0372",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b95713\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0373",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b917989\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0374",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b910498\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0375",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b99750\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0376",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b911985\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0377",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b920126\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0378",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b923702\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0379",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b99770\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0380",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b917459\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0381",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b98098\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0382",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b911416\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0383",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b914564\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0384",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b915340\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0385",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b99470\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0386",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b98149\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0387",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b98341\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0388",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b99354\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0389",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b910748\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0390",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b912393\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0391",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b98649\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0392",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b912415\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0393",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b99568\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0394",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b924426\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0395",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b913816\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0396",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b923590\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0397",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b911914\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0398",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b914748\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0399",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b97056\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0400",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b916156\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0401",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b97419\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0402",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b911580\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0403",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b910900\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0404",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b99213\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0405",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b912383\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0406",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b919170\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0407",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b912465\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0408",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b98244\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0409",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b96375\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0410",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b98049\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0411",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b99896\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0412",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b911468\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0413",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b912369\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0414",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b913129\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0415",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b94963\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0416",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b911940\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0417",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b914366\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0418",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b918046\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0419",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b910524\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0420",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b922511\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0421",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b915444\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0422",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b99336\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0423",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b919970\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0424",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b94386\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0425",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b919914\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0426",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b915043\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0427",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b913369\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0428",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b913209\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0429",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b910959\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0430",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b912071\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0431",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b911167\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0432",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b918993\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0433",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b98333\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0434",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b96954\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0435",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b98718\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0436",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b911883\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0437",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b912015\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0438",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b912370\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0439",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b99126\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0440",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b95858\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0441",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b914611\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0442",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b96164\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0443",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b98379\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0444",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b919965\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0445",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b99979\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0446",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b912857\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0447",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b912388\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0448",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b913411\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0449",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b98746\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0450",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b918288\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0451",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b98812\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0452",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b911222\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0453",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b912262\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0454",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b919336\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0455",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b94185\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0456",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b916221\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0457",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b918677\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0458",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b916667\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0459",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b913701\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0460",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b918360\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0461",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b912845\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0462",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b99718\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0463",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b97221\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0464",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b915486\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0465",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b912232\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0466",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b97235\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0467",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b915270\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0468",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b98228\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0469",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b98423\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0470",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b916126\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0471",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b98741\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0472",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b99388\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0473",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b924794\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0474",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b98854\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0475",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b916854\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0476",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b921737\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0477",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b96912\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0478",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b914033\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0479",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b95675\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0480",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b96502\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0481",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b97808\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0482",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b911079\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0483",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b913402\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0484",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b925 Lakhs",
+        "premium":"\u20b918375\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0485",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b911909\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0486",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b950 Lakhs",
+        "premium":"\u20b911787\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0487",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b922060\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0488",
+        "policy_type":"Health",
+        "insurer":"Demo Insurance Co.",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b923602\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0489",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b910 Lakhs",
+        "premium":"\u20b914767\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0490",
+        "policy_type":"Life",
+        "insurer":"FutureLife Insure",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b96890\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0491",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b918640\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0492",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b99361\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0493",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b94973\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0494",
+        "policy_type":"Car",
+        "insurer":"AutoShield Inc",
+        "coverage_amount":"\u20b93 Lakhs",
+        "premium":"\u20b97642\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0495",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b96494\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0496",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b912858\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0497",
+        "policy_type":"Car",
+        "insurer":"TrustCover Ltd",
+        "coverage_amount":"\u20b97 Lakhs",
+        "premium":"\u20b94780\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b92,000",
+        "validity_days":15
+    },
+    {
+        "quote_id":"Q0498",
+        "policy_type":"Health",
+        "insurer":"SafeLife Insure",
+        "coverage_amount":"\u20b95 Lakhs",
+        "premium":"\u20b918057\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b910,000",
+        "validity_days":10
+    },
+    {
+        "quote_id":"Q0499",
+        "policy_type":"Life",
+        "insurer":"LifeSecure Corp",
+        "coverage_amount":"\u20b91 Crore",
+        "premium":"\u20b99718\/year",
+        "tenure":"1 Year",
+        "deductible":"NA",
+        "validity_days":30
+    },
+    {
+        "quote_id":"Q0500",
+        "policy_type":"Health",
+        "insurer":"MediCover Ltd",
+        "coverage_amount":"\u20b920 Lakhs",
+        "premium":"\u20b918564\/year",
+        "tenure":"1 Year",
+        "deductible":"\u20b95,000",
+        "validity_days":15
+    }
+]

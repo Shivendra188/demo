@@ -1,0 +1,1 @@
+https://ljepgqjlwtvxotzgdikp.supabase.co/customer

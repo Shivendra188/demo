@@ -1,0 +1,123 @@
+@import "tailwindcss";
+
+
+/* =====================
+   GLOBAL THEME
+===================== */
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: radial-gradient(circle at top, #111827, #020617);
+  color: #f8fafc;
+}
+
+/* =====================
+   LAYOUT
+===================== */
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+/* =====================
+   SIDEBAR
+===================== */
+
+.sidebar {
+  width: 64px;
+  background: linear-gradient(180deg, #020617, #020617f0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 16px;
+  border-right: 1px solid rgba(251, 191, 36, 0.25);
+}
+
+/* ICON BASE */
+.icon {
+  width: 42px;
+  height: 42px;
+  margin: 12px 0;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  color: #e5e7eb;                 /* premium white */
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+/* ICON HOVER */
+.icon:hover {
+  background: rgba(251, 191, 36, 0.12);
+  color: #fde68a;
+}
+
+/* ICON ACTIVE (PREMIUM GLOW) */
+.icon.active {
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: #020617;
+  box-shadow: 0 0 22px rgba(251, 191, 36, 0.55);
+  transform: scale(1.12);
+}
+
+/* =====================
+   CENTER PANEL
+===================== */
+
+.center {
+  flex: 1;
+  padding: 24px;
+}
+
+/* =====================
+   RIGHT PANEL
+===================== */
+
+.right {
+  width: 340px;
+  padding: 24px;
+}
+
+/* =====================
+   CARDS
+===================== */
+
+.card {
+  background: rgba(2, 6, 23, 0.92);
+  border-radius: 20px;
+  padding: 16px;
+  margin-bottom: 16px;
+  border: 1px solid rgba(251, 191, 36, 0.25);
+}
+
+/* STATS */
+.stats div {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  color: #f8fafc;
+}
+
+/* ACTIVITY */
+.activity {
+  background: rgba(251, 191, 36, 0.1);
+  border-radius: 14px;
+  padding: 12px;
+  margin-top: 12px;
+  border: 1px solid rgba(251, 191, 36, 0.25);
+}
+
+.activity span {
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+/* SYSTEM STATUS */
+.system-ok {
+  margin-top: 16px;
+  color: #fbbf24;
+  font-weight: 600;
+}

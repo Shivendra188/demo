@@ -1,0 +1,11 @@
+# Environment variables
+.env
+backend/.env
+
+# Python
+venv/
+__pycache__/
+
+# Node
+node_modules/
+python -m uvicorn main:app --reload
