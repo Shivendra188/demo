@@ -85,3 +85,22 @@ Sent: {today.strftime('%d %b %Y')}
         "targets": len(data),
         "results": results[-5:]  # Last 5 for demo
     }
+
+def send_quote_whatsapp(quote_data: dict) -> str:
+    """Send quote via WhatsApp."""
+    message = f"""✅ Quote Ready {quote_data['customer_name']}! 
+
+📋 Policy: {quote_data['policy_type']}
+💰 Current: {quote_data['current_premium']}
+💰 **NEW: {quote_data['new_premium']} ({quote_data['hike_percent']})**
+📅 Renew from: {quote_data['renewal_start']}
+⏰ Valid: {quote_data['validity_days']} days
+
+Insurer: {quote_data['current_insurer']}"""
+    
+    client.messages.create(
+        body=message,
+        from_="whatsapp:+14155238886",  # Sandbox
+        to=f"whatsapp:{quote_data['customer_phone']}"
+    )
+    return f"✅ Quote sent to {quote_data['customer_phone']}"

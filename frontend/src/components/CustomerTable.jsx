@@ -22,21 +22,27 @@ export default function CustomerTable() {
   const [error, setError] = useState("");
 
   const fetchData = async () => {
-    try {
-      setLoading(true);
-      setError("");
+  try {
+    setLoading(true);
+    const res = await api.get("http://127.0.0.1:8000/crm-dashboard");
+    
+    // DEBUG: Look at your browser console (F12) to see this!
+    console.log("Full API Response:", res.data);
 
-      const res = await api.get("/crm-dashboard");
-
-      // Backend returns { data: [], total, updated }
-      setRows(res.data?.data ?? []);
-    } catch (err) {
-      console.error(err);
-      setError("Failed to fetch CRM data");
-    } finally {
-      setLoading(false);
+    // If your backend returns { "data": [...] }, use this:
+    if (res.data && res.data.data) {
+      setRows(res.data.data);
+    } else {
+      // Fallback if the backend sends the list directly
+      setRows(Array.isArray(res.data) ? res.data : []);
     }
-  };
+  } catch (err) {
+    console.error("Fetch Error:", err);
+    setError("Failed to fetch CRM data");
+  } finally {
+    setLoading(false);
+  }
+};
 
   useEffect(() => {
     fetchData();
@@ -55,7 +61,7 @@ export default function CustomerTable() {
 
       {rows.length === 0 ? (
         <p className="text-gray-400">
-          No customer data available. Trigger an AI action to load customers.
+          No customer data available. 
         </p>
       ) : (
         <table className="w-full border-collapse text-sm">

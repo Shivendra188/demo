@@ -8,3 +8,14 @@ export default defineConfig({
   tailwindcss(),
   ]
 })
+
+// export default defineConfig({
+//   plugins: [react(),tailwindcss()
+//   ],
+//   server: {
+//     proxy: {
+//       '/crm-dashboard': 'http://127.0.0.1:8000',
+//       '/customers': 'http://127.0.0.1:8000',
+//     },
+//   },
+// })
