@@ -1,39 +1,58 @@
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-
-from langchain_core.messages import HumanMessage
-from tools.reminder import reminder_tool
-import os 
+from langchain_core.messages import HumanMessage, AIMessage, ToolMessage
+from langchain_core.tools import tool
+from tools.reminder import reminder_tool  # Your existing tool
+import os
 
 llm = ChatGroq(
     groq_api_key=os.getenv("GROQ_API_KEY"),
-    model_name="llama-3.1-8b-instant"
+    model_name="llama-3.1-8b-instant",
+    temperature=0.1
 )
+
+# Simple Tool Calling Chain (NO AGENT NEEDED)
 prompt = ChatPromptTemplate.from_messages([
-    ("system", """You are Reminder Agent – expert at insurance renewals.
+    ("system", """Reminder Agent – insurance renewal expert.
 
-When to act:
-• "reminder", "renewal", "expiring", "whatsapp" → Send WhatsApp
-• customer_id → Single targeted reminder
-• No ID → Batch all expiring (30 days)
+Parse & act:
+• "send reminders" → reminder_tool()
+• "reminder CUST0001" → reminder_tool("CUST0001")
+• ALWAYS call tool if renewal/expiring/Whatsapp mentioned
 
-ALWAYS call reminder_tool. Confirm before sending.
-Examples:
-"send reminders" → Batch all
-"reminder CUST0001" → Single customer"""),
+Respond friendly after tool."""),
     MessagesPlaceholder(variable_name="chat_history", optional=True),
     ("human", "{input}"),
-    MessagesPlaceholder(variable_name="agent_scratchpad"),
 ])
 
-# Create agent
-agent = create_openai_functions_agent(llm, [reminder_tool], prompt)
-agent_executor = AgentExecutor(agent=agent, tools=[reminder_tool], verbose=True)
+# Bind tool to Groq
+llm_with_tools = llm.bind_tools([reminder_tool])
 
-def run_reminder_agent(user_input: str, chat_history: list = []):
-    """Run reminder agent."""
-    result = agent_executor.invoke({
-        "input": user_input,
-        "chat_history": chat_history
-    })
-    return result["output"]
+# Simple invoke chain
+async def run_reminder_agent(user_input: str, chat_history: list = []):
+    messages = chat_history + [HumanMessage(content=user_input)]
+    
+    # Groq tool call
+    response = await llm_with_tools.ainvoke(messages)
+    
+    # Execute tool if called
+    if response.tool_calls:
+        tool_result = reminder_tool.invoke(response.tool_calls[0]["args"])
+        tool_msg = ToolMessage(
+            content=tool_result,
+            tool_call_id=response.tool_calls[0]["id"]
+        )
+        
+        # Final response
+        final_response = await llm.ainvoke(messages + [response, tool_msg])
+        return {
+            "response": final_response.content,
+            "tool_used": True,
+            "result": tool_result
+        }
+    
+    # No tool needed
+    return {
+        "response": response.content,
+        "tool_used": False
+    }
