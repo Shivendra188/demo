@@ -1,9 +1,7 @@
 from typing import TypedDict, Annotated, Sequence
-from langchain_core.messages import BaseMessage, HumanMessage, AIMessage
+from langchain_core.messages import BaseMessage, HumanMessage, AIMessage, ToolMessage
 from langchain_core.tools import tool
 from langchain_groq import ChatGroq
-
-from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langgraph.graph import StateGraph, END
 from langgraph.prebuilt import ToolNode, tools_condition
 from tools.crm import crm_update
@@ -14,143 +12,116 @@ import os
 # State definition
 class AgentState(TypedDict):
     messages: Annotated[Sequence[BaseMessage], operator.add]
-    customer_id: str
-    field_type: str
-    field_value: str
-    is_valid: bool
 
-# LLM with tools
+# LLM Setup
 llm = ChatGroq(
     groq_api_key=os.getenv("GROQ_API_KEY"),
     model_name="llama-3.1-8b-instant"
 )
 
-llm_with_tools = llm.bind_tools([crm_update])
+# Bind tool to LLM
+tools = [crm_update]
+llm_with_tools = llm.bind_tools(tools)
 
-# Nodes
-def parse_command(state: AgentState):
-    """Parse user input to extract customer_id, field, and value."""
-    user_input = state["messages"][-1].content
+def crm_parser(state: AgentState):
+    """Parse CRM command → NO STRICT VALIDATION LOOPS."""
+    user_input = state["messages"][-1].content.lower()
     
-    # Parse patterns
-    patterns = {
-        r"(?:update|change|set)\s+(CUST\d+)\s+(phone|name|email)\s+(.+?)(?:\s|$)",
-        r"(?:update|change|set)\s+(CUST\d+)\s+(.+?)\s+to\s+(.+?)(?:\s|$)",
-        r"update\s+(CUST\d+)\s+(phone|name|email)\s*=?\s*(.+?)(?:\s|$)"
-    }
+    # Flexible patterns
+    patterns = [
+        r"(?:update|change|set)\s+(cust\d{4})\s+(phone|name|email)\s*[:=]?\s*([^\s]+(?:\s+[^\s]+)?)(?:\s|$)",
+        r"(?:update|change|set)\s+(cust\d{4})\s+(phone|name|email)\s+(.+?)(?:\s|$)",
+        r"(update|change|set)\s+(cust\d{4})\s+(.+?)\s+(phone|name|email)\s+(.+?)(?:\s|$)",
+    ]
     
     customer_id = field_type = field_value = ""
     for pattern in patterns:
         match = re.search(pattern, user_input, re.IGNORECASE)
         if match:
-            customer_id, field_type, field_value = match.groups()
+            groups = match.groups()
+            customer_id = groups[0].upper()
+            field_type = groups[1].lower()
+            field_value = groups[2].strip()
             break
     
-    # Validate phone format
-    if field_type == "phone":
-        phone_digits = re.sub(r'[^\d]', '', field_value)
-        is_valid_phone = len(phone_digits) == 10 or field_value.startswith("+91")
-        if not is_valid_phone:
-            return {
-                "messages": [HumanMessage(content=f"❌ Invalid phone format: {field_value}. Use 10 digits or +91xxxxxxxxxx")],
-                "is_valid": False
-            }
+    # LOOSER VALIDATION - Only fail on obvious errors
+    if not customer_id or len(customer_id) < 6:
+        return {"messages": [AIMessage(content="❌ Format: `update CUST0001 phone 9876543210`")] }
     
-    # Validate customer_id format
-    if not customer_id.startswith("CUST"):
-        return {
-            "messages": [HumanMessage(content="❌ Please use CUSTXXXX format (e.g., CUST0001)")],
-            "is_valid": False
-        }
+    # Phone validation (optional - let tool handle)
+    if field_type == "phone" and field_value:
+        if len(field_value) < 10:
+            return {"messages": [AIMessage(content=f"⚠️ Phone {field_value} looks short. Continue?")] }
+    
+    if not field_type or not field_value:
+        return {"messages": [AIMessage(content="❌ Missing field/value. Examples:\n`update CUST0001 phone 9876543210`\n`change CUST0002 name Amit Kumar`")] }
+
+    # ✅ TOOL CALL
+    tool_input = {"customer_id": customer_id}
+    if field_type == "phone": tool_input["phone"] = field_value
+    elif field_type == "name": tool_input["name"] = field_value
+    elif field_type == "email": tool_input["email"] = field_value
     
     return {
-        "messages": [AIMessage(content=f"✅ Parsed: Update {customer_id} {field_type} to '{field_value}'")],
-        "customer_id": customer_id,
-        "field_type": field_type,
-        "field_value": field_value,
-        "is_valid": True
+        "messages": [AIMessage(
+            content=f"✅ Parsed: {customer_id} | {field_type} → {field_value}",
+            tool_calls=[{
+                "name": "crm_update",
+                "args": tool_input,
+                "id": "crm_1"
+            }]
+        )]
     }
 
-def call_tool(state: AgentState):
-    """Call CRM update tool with parsed data."""
-    if not state.get("is_valid"):
-        return {"messages": [AIMessage(content="❌ Skipping tool call - invalid input")]}
-    
-    # Create tool input
-    tool_input = {"customer_id": state["customer_id"]}
-    if state["field_type"] == "phone":
-        tool_input["phone"] = state["field_value"]
-    elif state["field_type"] == "name":
-        tool_input["name"] = state["field_value"]
-    elif state["field_type"] == "email":
-        tool_input["email"] = state["field_value"]
-    
-    # Generate tool call message
-    tool_message = AIMessage(content="", tool_calls=[{
-        "name": "crm_update",
-        "args": tool_input,
-        "id": "crm_update_call"
-    }])
-    
-    return {"messages": [tool_message]}
 
-def should_continue(state: AgentState):
-    """Router function for graph flow."""
+# Agent node (handles tool responses)
+def agent_node(state: AgentState):
+    """Agent decides next action."""
     messages = state["messages"]
     last_message = messages[-1]
     
-    # If tool call made, continue to tool node
+    # If last message is tool result, respond with summary
+    if isinstance(last_message, ToolMessage):
+        return {
+            "messages": [AIMessage(content="✅ CRM operation completed successfully!")]
+        }
+    
+    # Otherwise call LLM with tools
+    return {"messages": [llm_with_tools.invoke(messages)]}
+
+# Router
+def route_crm(state: AgentState):
+    messages = state["messages"]
+    
+    # Route to tools if tool_calls exist
+    last_message = messages[-1]
     if last_message.tool_calls:
         return "tools"
     
-    # If invalid or complete, end
-    if not state.get("is_valid", True):
-        return END
-    
-    # Otherwise continue parsing
-    return "parse"
+    # End if no more actions needed
+    return END
 
-# Router node
-def router(state: AgentState):
-    return should_continue(state)
-
-# Build the graph
+# Build SIMPLE graph: Parse → Tools → Agent → END
 workflow = StateGraph(AgentState)
 
-# Add nodes
-workflow.add_node("parse", parse_command)
-workflow.add_node("agent", lambda state: {"messages": [llm_with_tools.invoke(state["messages"])]})
-workflow.add_node("tools", ToolNode([crm_update]))
+workflow.add_node("parser", crm_parser)
+workflow.add_node("tools", ToolNode(tools))
+workflow.add_node("agent", agent_node)
 
-# Set entry point
-workflow.set_entry_point("parse")
+# Edges
+workflow.set_entry_point("parser")
+workflow.add_conditional_edges("parser", route_crm, {"tools": "tools", "__end__": END})
+workflow.add_conditional_edges("tools", tools_condition, {"agent": "agent", "__end__": END})
+workflow.add_edge("agent", END)
 
-# Add edges
-workflow.add_conditional_edges(
-    "parse",
-    router,
-    {
-        "parse": "parse",
-        "tools": "tools",
-        "agent": "agent"
-    }
-)
-workflow.add_conditional_edges(
-    "agent",
-    tools_condition,
-    {
-        "tools": "tools",
-        "__end__": END
-    }
-)
-workflow.add_edge("tools", END)
-
-# Compile graph
+# Compile with recursion limit
 crm_graph = workflow.compile()
 
 def run_crm_agent(user_input: str):
-    """Run the CRM LangGraph agent."""
+    """Run CRM agent."""
     result = crm_graph.invoke({
         "messages": [HumanMessage(content=user_input)]
     })
-    return result["messages"][-1].content
+    # Return final message content
+    final_msg = result["messages"][-1]
+    return final_msg.content

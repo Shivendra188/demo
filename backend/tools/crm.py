@@ -50,12 +50,12 @@ def crm_update(input: UpdateCustomer) -> str:
     
     if result.data:
         return f"""
-✅ CRM Update Complete!
-👤 {input.customer_id}
+CRM Update Complete!
+{input.customer_id}
 - Name: {result.data[0]["name"]}
 - Phone: {result.data[0]["phone"]}
 - Email: {result.data[0]["email"]}
 Updated: {len(updates)} fields
         """
     else:
-        return f"❌ Update failed for {input.customer_id}"
+        return f"Update failed for {input.customer_id}"
