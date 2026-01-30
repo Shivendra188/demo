@@ -1,6 +1,6 @@
 
 
-from agents.policy_agent import handle_policy_query
+from agents.policy_agent import run_policy_agent
 from agents.quote_agent import run_quote
 
 def route_task(user_input: str):
@@ -24,7 +24,7 @@ def route_task(user_input: str):
     if any(word in text for word in policy_keywords):
         return {
             "task": "POLICY",
-            "response": handle_policy_query(user_input)
+            "response": run_policy_agent(user_input)
         }
 
     return {

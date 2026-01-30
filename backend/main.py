@@ -13,7 +13,7 @@ load_dotenv()
 # ===== Agents =====
 from agents.supervisor import route_task
 from agents.quote_agent import run_quote  # ✅ New import
-from agents.policy_agent import handle_policy_query
+from agents.policy_agent import run_policy_agent
 from agents.reminder_agent import run_reminder_agent
 from agents.crm_agent import run_crm_agent
 
@@ -55,7 +55,7 @@ def chat(request: ChatRequest):
         return run_quote(request.dict())
 
     if task == "POLICY":
-        answer = handle_policy_query(request.message)
+        answer = run_policy_agent(request.message)
         return {
             "response": answer,
             "task_type": "POLICY"
@@ -235,3 +235,9 @@ async def quote_agent_endpoint(request: dict):
     message = request.get("message", "")
     result = run_quote(message)
     return {"response": result, "input": message}
+
+@app.post("/policy")
+async def policy_agent_endpoint(request: dict):
+    message = request.get("message", "")
+    result = run_policy_agent(message)
+    return {"response": result, "task_type": "POLICY"}
