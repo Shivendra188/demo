@@ -1,13 +1,15 @@
 from typing import TypedDict, Annotated, Sequence
 from langchain_core.messages import BaseMessage, HumanMessage, AIMessage
 from langchain_core.tools import tool
-from langchain_openai import ChatOpenAI
+from langchain_groq import ChatGroq
+
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langgraph.graph import StateGraph, END
 from langgraph.prebuilt import ToolNode, tools_condition
 from tools.crm import crm_update
 import operator
 import re
+import os
 
 # State definition
 class AgentState(TypedDict):
@@ -18,7 +20,11 @@ class AgentState(TypedDict):
     is_valid: bool
 
 # LLM with tools
-llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
+llm = ChatGroq(
+    groq_api_key=os.getenv("GROQ_API_KEY"),
+    model_name="llama-3.1-8b-instant"
+)
+
 llm_with_tools = llm.bind_tools([crm_update])
 
 # Nodes

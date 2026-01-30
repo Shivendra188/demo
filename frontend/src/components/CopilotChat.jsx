@@ -143,7 +143,7 @@ export default function CopilotChat() {
           <button
             onClick={sendMessage}
             disabled={!input.trim() || loading}
-            className="px-8 py-4 bg-gradient-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 disabled:opacity-50 font-bold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 whitespace-nowrap text-slate-900"
+            className="px-8 py-4 bg-linear-to-r from-amber-400 to-amber-500 hover:from-amber-300 hover:to-amber-400 disabled:opacity-50 font-bold rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 whitespace-nowrap text-slate-900"
           >
             {loading ? "⏳" : "➤ Send"}
           </button>

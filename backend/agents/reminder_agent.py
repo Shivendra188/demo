@@ -1,13 +1,14 @@
-from langchain_openai import ChatOpenAI
+from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
-from langchain.agents import create_openai_functions_agent, AgentExecutor
-from langchain.agents import create_tool_calling_agent
-from langchain.agents import AgentExecutor
+
 from langchain_core.messages import HumanMessage
 from tools.reminder import reminder_tool
+import os 
 
-llm = ChatOpenAI(model="gpt-4o-mini", temperature=0)
-
+llm = ChatGroq(
+    groq_api_key=os.getenv("GROQ_API_KEY"),
+    model_name="llama-3.1-8b-instant"
+)
 prompt = ChatPromptTemplate.from_messages([
     ("system", """You are Reminder Agent – expert at insurance renewals.
 

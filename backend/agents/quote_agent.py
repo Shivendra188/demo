@@ -1,57 +1,45 @@
-from typing import Dict
-from langchain_groq import ChatGroq
+
+
+
+import json
 import os
 
-# LLM only for explanation (NOT calculation)
-llm = ChatGroq(
-    groq_api_key=os.getenv("GROQ_API_KEY"),
-    model_name="llama-3.1-8b-instant"
-)
+QUOTES_PATH = os.path.join(os.path.dirname(__file__), "..", "quotes.json")
 
-def calculate_premium(age: int, coverage: int) -> int:
-    # Base premium by age
-    if age < 30:
-        base = 4000
-    elif age <= 45:
-        base = 6000
+def generate_quote(user_input: str):
+    user_input = user_input.lower()
+
+    if "health" in user_input:
+        policy_type = "Health"
+    elif "car" in user_input or "auto" in user_input:
+        policy_type = "Car"
+    elif "life" in user_input:
+        policy_type = "Life"
     else:
-        base = 9000
+        return {
+            "agent": "Quote Agent",
+            "response": "Please specify policy type: Health, Car, or Life."
+        }
 
-    # Coverage multiplier
-    if coverage <= 5:
-        multiplier = 1
-    elif coverage <= 10:
-        multiplier = 1.7
-    else:
-        multiplier = 3
+    with open(QUOTES_PATH, "r", encoding="utf-8") as f:
+        quotes = json.load(f)
 
-    return int(base * multiplier)
+    filtered = [q for q in quotes if q["policy_type"] == policy_type]
 
-def generate_quote(payload: Dict):
-    age = payload.get("age", 30)
-    coverage = payload.get("coverage_lakh", 5)
-    duration = payload.get("duration_years", 1)
+    # sort by premium (₹xxxxx/year → extract number)
+    filtered.sort(
+        key=lambda x: int(
+            x["premium"]
+            .replace("₹", "")
+            .replace("/year", "")
+            .replace(",", "")
+        )
+    )
 
-    premium = calculate_premium(age, coverage)
-
-    explanation_prompt = f"""
-    Explain this insurance quote in simple terms:
-
-    Age: {age}
-    Coverage: ₹{coverage} lakh
-    Duration: {duration} year(s)
-    Annual Premium: ₹{premium}
-
-    Keep it friendly and clear.
-    """
-
-    explanation = llm.invoke(explanation_prompt).content
+    top_quotes = filtered[:3]
 
     return {
-        "type": "QUOTE",
-        "age": age,
-        "coverage_lakh": coverage,
-        "duration_years": duration,
-        "annual_premium": premium,
-        "explanation": explanation
+        "agent": "Quote Agent",
+        "policy_type": policy_type,
+        "quotes": top_quotes
     }
