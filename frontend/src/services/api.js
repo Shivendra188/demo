@@ -1,33 +1,33 @@
 import axios from "axios";
 
-const API_BASE = "http://localhost:8000";
-
 const api = axios.create({
-  baseURL: API_BASE,
-  timeout: 10000, // 10s timeout
+  baseURL: import.meta.env.VITE_API_BASE_URL,
   headers: {
     "Content-Type": "application/json",
   },
+  timeout: 15000,
 });
 
-export async function sendCommand(message) {
-  try {
-    const response = await api.post("/chat", { message });
-    return response.data;
-  } catch (error) {
-    console.error("API Error:", error);
-    throw new Error(error.response?.data?.error || "Backend unavailable");
+// Global error handler
+api.interceptors.response.use(
+  (res) => res,
+  (err) => {
+    const message =
+      err?.response?.data?.error ||
+      err?.response?.data?.detail ||
+      "Server error";
+    return Promise.reject(message);
   }
-}
+);
 
-export async function getQuotes(type) {
-  const response = await api.get(`/quotes/${type}`);
-  return response.data.quotes;
-}
-
-export async function getDashboard() {
-  const response = await api.get("/crm-dashboard");
+/* =========================
+   Copilot / AI Chat API
+   ========================= */
+export const sendCommand = async (message) => {
+  const response = await api.post("/chat", {
+    message,
+  });
   return response.data;
-}
+};
 
 export default api;
