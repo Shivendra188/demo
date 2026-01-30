@@ -8,6 +8,13 @@ const AGENTS = [
   "Reminder Agent",
 ];
 
+const AGENT_MAP = {
+  QUOTE: "Quote Agent",
+  POLICY: "Policy Agent",
+  CRM: "CRM Agent",
+  REMINDER: "Reminder Agent",
+};
+
 export default function CopilotChat() {
   const [messages, setMessages] = useState([
     {
@@ -45,13 +52,18 @@ export default function CopilotChat() {
     try {
       const res = await sendCommand(userMessage.content);
 
-      const agentName = res?.agent || "AI Agent";
+      const agentName =
+        AGENT_MAP[res?.task_type] || "AI Agent";
+
       const agentResponse =
         res?.response ||
         res?.message ||
         "✅ Command executed successfully.";
 
       setActiveAgent(agentName);
+
+      // auto-reset agent status after 5s
+      setTimeout(() => setActiveAgent(null), 5000);
 
       setMessages((prev) => [
         ...prev,
