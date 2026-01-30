@@ -5,5 +5,5 @@ langchain
 langchain-grok
 twilio
 
-
+langchain_community
 openai

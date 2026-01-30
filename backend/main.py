@@ -93,12 +93,13 @@ def crm_dashboard() -> Dict:
             status = "Expired"
 
         table_data.append({
-            "name": row["customers"]["name"],
-            "policy": f"{row['policy_type']} ({row['policy_id']})",
-            "expiry": expiry,
-            "premium": f"₹{int(row.get('premium', 0)):,}",
-            "status": status
+        "name": row["customers"]["name"],
+        "phone": row["customers"]["phone"],
+        "policy_type": row["policy_type"],
+        "policy_id": row["policy_id"],
+        "status": status,
         })
+
 
     return {
         "data": table_data,
