@@ -8,15 +8,20 @@ const api = axios.create({
   timeout: 15000,
 });
 
-// Global error handler
+/* =========================
+   Global Error Handler
+   ========================= */
 api.interceptors.response.use(
   (res) => res,
   (err) => {
     const message =
       err?.response?.data?.error ||
       err?.response?.data?.detail ||
+      err?.message ||
       "Server error";
-    return Promise.reject(message);
+
+    // ✅ Always throw Error object
+    return Promise.reject(new Error(message));
   }
 );
 

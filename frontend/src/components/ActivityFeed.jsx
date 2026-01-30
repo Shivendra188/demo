@@ -1,67 +1,77 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
-export default function ActivityFeed({ activities }) {
+export default function ActivityFeed({ activity }) {
   const [activityLog, setActivityLog] = useState([]);
 
+  // Keep last 10 activities
   useEffect(() => {
-    if (activities) {
-      setActivityLog(prev => [activities, ...prev.slice(0, 9)]); // Last 10
+    if (activity) {
+      setActivityLog((prev) => [activity, ...prev].slice(0, 10));
     }
-  }, [activities]);
+  }, [activity]);
 
-  const getIcon = (type) => {
-    const icons = {
-      QUOTE: '💰',
-      POLICY: '📄',
-      REMINDER: '📱',
-      CRM: '👤',
-      unknown: '⚡'
-    };
-    return icons[type] || '⚡';
+  const getIcon = (status) => {
+    if (status === "success") return "🟢";
+    if (status === "running") return "🔵";
+    if (status === "failed") return "🔴";
+    return "⚡";
   };
 
   return (
-    <div className="card shadow-2xl">
-      <div className="flex justify-between items-center mb-6">
-        <div>
-          <h3 className="text-2xl font-bold">📊 Activity Feed</h3>
-          <p className="text-slate-500">Live results from copilot commands</p>
-        </div>
-        <span className="px-4 py-1 bg-indigo-100 text-indigo-800 rounded-full text-sm font-bold">
-          {activityLog.length}
-        </span>
+    <div className="h-full bg-slate-950 rounded-2xl border border-slate-800 overflow-hidden">
+
+      {/* Header */}
+      <div className="p-4 border-b border-slate-800">
+        <h3 className="text-lg font-bold text-white">📊 Activity Feed</h3>
+        <p className="text-xs text-slate-400">
+          Live execution logs from AI agents
+        </p>
       </div>
 
-      <div className="space-y-4 max-h-96 overflow-y-auto">
-        {activityLog.map((activity, i) => (
-          <div key={i} className="p-6 bg-gradient-to-r from-slate-50 to-indigo-50 rounded-2xl border-l-4 border-indigo-500 hover:shadow-md transition-all">
-            <div className="flex items-start gap-4">
-              <div className="text-2xl flex-shrink-0">{getIcon(activity.type)}</div>
-              
-              <div className="flex-1 min-w-0">
-                <div className="font-semibold text-slate-900 mb-1 truncate">
-                  {activity.type} Agent
+      {/* Activity List */}
+      <div className="p-4 space-y-3 overflow-y-auto max-h-[32rem]">
+        {activityLog.length === 0 && (
+          <div className="text-center text-slate-500 text-sm py-10">
+            Send a command to see agent activity
+          </div>
+        )}
+
+        {activityLog.map((a, i) => (
+          <div
+            key={i}
+            className="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-400/50 transition"
+          >
+            <div className="flex items-start gap-3">
+              <div className="text-lg">{getIcon(a.status)}</div>
+
+              <div className="flex-1">
+                <div className="flex justify-between items-center">
+                  <span className="text-sm font-semibold text-white">
+                    {a.agent}
+                  </span>
+                  <span className="text-[11px] text-slate-500">
+                    {a.time}
+                  </span>
                 </div>
-                <div className="text-sm text-slate-600 mb-2 truncate">
-                  "{activity.message}"
-                </div>
-                <div className="text-sm bg-white p-3 rounded-xl border shadow-sm">
-                  {activity.result || "Executed"}
-                </div>
-                <div className="text-xs text-slate-500 mt-2">
-                  {activity.timestamp}
-                </div>
+
+                <p className="text-xs text-slate-300 mt-1">
+                  {a.action}
+                </p>
+
+                {a.duration && (
+                  <p className="text-[11px] text-slate-500 mt-1">
+                    ⏱ {a.duration}
+                  </p>
+                )}
               </div>
             </div>
           </div>
         ))}
+      </div>
 
-        {activityLog.length === 0 && (
-          <div className="text-center py-12 text-slate-500">
-            <div className="text-4xl mb-4">📱</div>
-            <p>Send a command in chat to see live results</p>
-          </div>
-        )}
+      {/* Footer */}
+      <div className="p-3 border-t border-slate-800 text-xs text-emerald-400">
+        ● All systems operational
       </div>
     </div>
   );
