@@ -10,3 +10,4 @@ supabase
 pydantic
 PyMuPDF
 langchain_openai
+

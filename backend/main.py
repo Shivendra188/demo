@@ -54,14 +54,25 @@ def chat(request: ChatRequest):
         return generate_quote(request.dict())
 
     if task == "POLICY":
-        return handle_policy_query(request.message)
+        answer = handle_policy_query(request.message)
+        return {
+            "response": answer,
+            "task_type": "POLICY"
+        }
 
     if task == "REMINDER":
         result = run_reminder_agent(request.message)
-        return {"response": result, "task_type": "REMINDER"}
+        return {
+            "response": result,
+            "task_type": "REMINDER"
+        }
 
     if task == "CRM":
-        return {"response": result, "task_type": "CRM"}
+        result = run_crm_agent(request.message)
+        return {
+            "response": result,
+            "task_type": "CRM"
+        }
 
     return {"error": "Could not understand request"}
 
@@ -93,13 +104,12 @@ def crm_dashboard() -> Dict:
             status = "Expired"
 
         table_data.append({
-        "name": row["customers"]["name"],
-        "phone": row["customers"]["phone"],
-        "policy_type": row["policy_type"],
-        "policy_id": row["policy_id"],
-        "status": status,
+            "name": row["customers"]["name"],
+            "phone": row["customers"]["phone"],
+            "policy_type": row["policy_type"],
+            "policy_id": row["policy_id"],
+            "status": status,
         })
-
 
     return {
         "data": table_data,
@@ -146,7 +156,12 @@ def batch_reminders():
 
     results = []
     for p in expiring.data:
-        msg = f"Hello {p['customers']['name']}, your {p['policy_type']} policy {p['policy_id']} expires {p['policy_expiry']}."
+        msg = (
+            f"Hello {p['customers']['name']}, "
+            f"your {p['policy_type']} policy {p['policy_id']} "
+            f"expires {p['policy_expiry']}."
+        )
+
         send_whatsapp_message(
             WhatsAppMessage(
                 phone=p["customers"]["phone"],
@@ -157,12 +172,12 @@ def batch_reminders():
 
     return {"sent_to": len(results), "policies": results}
 
-
-#crm
-
+# ===== CRM (chat-based) =====
 @app.post("/crm")
 def crm_endpoint(request: dict):
     user_input = request["message"]
     result = run_crm_agent(user_input)
-    return {"response": result, "task_type": "CRM"}
- 
+    return {
+        "response": result,
+        "task_type": "CRM"
+    }
