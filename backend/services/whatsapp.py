@@ -11,9 +11,6 @@ ACC_SID = os.getenv('ACC_SID')
 AUTH_TOKEN = os.getenv('AUTH_TOKEN')
 TWILIO_WHATSAPP_NUMBER = os.getenv('TWILIO_WHATSAPP_NUMBER')
 
-ACC_SID='ACefb4789b810186fa9cc6b226c1f4916b'
-AUTH_TOKEN='efd9ad94e9fa1bdfedf0db102aa4b235'
-TWILIO_WHATSAPP_NUMBER='whatsapp:+14155238886'
 
 client = Client(ACC_SID, AUTH_TOKEN)
 supabase = create_client(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
