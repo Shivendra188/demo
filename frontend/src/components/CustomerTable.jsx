@@ -74,8 +74,8 @@ export default function CustomerTable() {
               <tr key={i} className="border-t border-yellow-400/25">
                 <td className="px-2 py-2">{c.name}</td>
                 <td className="px-2 py-2">{c.phone}</td>
-                <td className="px-2 py-2">{c.Policy_type}</td>
-                <td className="px-2 py-2">{c.Policy_id}</td>
+                <td className="px-2 py-2">{c.policy_type}</td>
+                <td className="px-2 py-2">{c.policy_id}</td>
                 <td className="px-2 py-2">
                   <StatusBadge status={c.status || "Active"} />
                 </td>
