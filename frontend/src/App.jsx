@@ -12,7 +12,6 @@ export default function App() {
     <ActivityProvider>
       <div className="app">
         <Sidebar />
-
         <main className="center">
           <Routes>
             <Route path="/" element={<Navigate to="/dashboard" />} />

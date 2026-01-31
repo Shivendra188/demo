@@ -1,24 +1,16 @@
 import { useEffect, useState } from "react";
+import { useActivity } from "../context/ActivityContext";
 
-const AGENTS = [
-  "QUOTE",
-  "POLICY",
-  "CRM",
-  "REMINDER",
-];
+const AGENTS = ["QUOTE", "POLICY", "POLICY_DATA", "CRM", "REMINDER"];
 
-export default function AgentsStatus({ lastTaskType, totalTasks }) {
+export default function AgentsStatus() {
+  const { lastTaskType, totalTasks } = useActivity();
   const [activeAgent, setActiveAgent] = useState(null);
 
   useEffect(() => {
     if (lastTaskType) {
       setActiveAgent(lastTaskType);
-
-      // Auto-reset to idle after 5s
-      const timer = setTimeout(() => {
-        setActiveAgent(null);
-      }, 5000);
-
+      const timer = setTimeout(() => setActiveAgent(null), 5000);
       return () => clearTimeout(timer);
     }
   }, [lastTaskType]);
@@ -40,10 +32,7 @@ export default function AgentsStatus({ lastTaskType, totalTasks }) {
                   : "bg-slate-900 border-slate-700 text-slate-300"
               }`}
             >
-              <span className="font-medium">
-                {agent} Agent
-              </span>
-
+              <span className="font-medium">{agent} Agent</span>
               <span className="text-sm font-semibold">
                 {isActive ? "🟢 Active" : "⚪ Idle"}
               </span>
@@ -52,18 +41,15 @@ export default function AgentsStatus({ lastTaskType, totalTasks }) {
         })}
       </div>
 
-      {/* Stats */}
       <div className="mt-6 grid grid-cols-3 gap-3 text-center text-sm">
         <div className="p-3 bg-slate-900 rounded-xl">
           <div className="text-slate-400">Agents</div>
-          <div className="text-lg font-bold text-white">4</div>
+          <div className="text-lg font-bold text-white">{AGENTS.length}</div>
         </div>
 
         <div className="p-3 bg-slate-900 rounded-xl">
           <div className="text-slate-400">Tasks</div>
-          <div className="text-lg font-bold text-white">
-            {totalTasks}
-          </div>
+          <div className="text-lg font-bold text-white">{totalTasks}</div>
         </div>
 
         <div className="p-3 bg-slate-900 rounded-xl">
