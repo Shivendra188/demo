@@ -1,234 +1,226 @@
-AI-Powered Insurance CRM Assistant
+🤖 Insurance AI Copilot (Multi-Agent System)
 
-An AI-driven Insurance CRM backend built with FastAPI, LangChain, LangGraph, and Groq LLM, capable of intelligently answering CRM, policy, and policy-data related queries using a supervisor-based multi-agent architecture.
+An AI-powered Insurance Copilot that enables users to interact with insurance systems using natural language.
+The system intelligently routes requests to specialized AI agents for Quotes, Policy Queries, CRM Updates, and WhatsApp Reminders.
 
- Features
+Designed for hackathons, demos, and real-world fintech / insurtech use cases.
 
- Multi-Agent Architecture
+🚀 Features
+🧠 Multi-Agent Architecture
 
-CRM Agent (customer & contact queries)
+Supervisor Agent
+Detects user intent and routes the request to the correct agent
 
-Policy Agent (general insurance questions)
-
-Policy Data Agent (policy status, expiry, premium, etc.)
-
- Supervisor Router
-
-Automatically routes user queries to the correct agent
-
- Groq LLM Integration
-
-Uses llama-3.1-8b-instant via LangChain
-
- LangGraph Workflows
-
-ToolNode-based agent execution
-
- Safe & Fault-Tolerant
-
-Handles missing API keys, empty data, and runtime errors gracefully
-
- FastAPI Ready
-
-Easily pluggable into REST APIs
-
- Production-Safe
-
-No uncaught exceptions
-
-Always returns a valid response
-
-🏗️ Project Structure
-backend/
-│
-├── agents/
-│   ├── supervisor.py          # Routes queries to correct agent
-│   ├── crm_agent.py           # CRM agent (LangGraph + tools)
-│   ├── policy_agent.py        # General insurance policy agent
-│   └── policydata_agent.py    # Policy data–aware agent
-│
-├── main.py                    # FastAPI entry point
-├── .env                       # Environment variables
-├── requirements.txt
-└── README.md
-
- Agent Responsibilities
- CRM Agent
-
-Handles:
-
-Customer details
-
-Phone number lookup
-
-Active / expired customers
-
-Policy ownership
-
-Uses LangGraph ToolNode with structured tools.
-
- Policy Agent
-
-Handles:
-
-Coverage details
-
-Benefits & exclusions
-
-Claims & renewals
-
-General insurance FAQs
-
-Does NOT rely on database records.
-
- Policy Data Agent
-
-Handles:
-
-Policy status
-
-Expiry dates
-
-Premium amounts
-
-Customer-specific policy details
-
-Answers only from provided policy data.
-
-Supervisor
-
-Acts as the brain:
-
-Detects user intent
-
-Routes query to:
-
-CRM Agent
+Quote Agent
+Generates insurance quotes based on user input
 
 Policy Agent
+Answers questions from insurance policy documents (PDF-based)
 
-Policy Data Agent
+CRM Agent
+Updates and retrieves customer data using natural language commands
 
-Provides fallback responses when intent is unclear
+Reminder Agent
+Sends WhatsApp renewal reminders automatically
 
-Tech Stack
+💬 AI Copilot Chat Interface
 
-Python 3.10+ (tested on 3.13)
+Chat-style UI (ChatGPT-like experience)
 
-FastAPI
+Displays which agent handled the request
 
-LangChain
+Real-time agent status panel
 
-LangGraph
+Live activity feed for system actions and updates
 
-Groq LLM
+📊 CRM Dashboard
 
-Uvicorn
+View customers and their policies
 
-Environment Setup
+Policy status tracking: Active / Expired
 
-Create a .env file in the backend/ directory:
+Auto-refreshing customer table
 
-GROQ_API_KEY=
+Backend-driven, real-time data updates
+
+🏗️ Tech Stack
+🔹 Backend
+
+FastAPI (Python)
+
+LangChain + LangGraph
+
+Groq LLM (llama-3.1-8b-instant)
+
+Supabase (PostgreSQL)
+
+Twilio WhatsApp API
+
+PyMuPDF (PDF parsing)
+
+🔹 Frontend
+
+React + Vite
+
+Axios
+
+Tailwind CSS
+
+Component-based UI architecture
+
+📂 Project Structure
+hackjnu/
+├── backend/
+│   ├── main.py
+│   ├── agents/
+│   │   ├── supervisor.py
+│   │   ├── quote_agent.py
+│   │   ├── policy_agent.py
+│   │   ├── crm_agent.py
+│   │   └── reminder_agent.py
+│   ├── services/
+│   │   ├── whatsapp.py
+│   │   └── pdf_parser.py
+│   ├── tools/
+│   │   ├── crm.py
+│   │   └── reminder.py
+│   └── .env
+│
+├── frontend/
+│   ├── src/
+│   │   ├── components/
+│   │   │   ├── CopilotChat.jsx
+│   │   │   ├── CustomerTable.jsx
+│   │   │   ├── ActivityFeed.jsx
+│   │   │   └── AgentsStatus.jsx
+│   │   ├── services/api.js
+│   │   └── App.jsx
+│   └── .env
+│
+└── README.md
+
+🔌 Backend API Endpoints
+🔹 AI Copilot Chat
+
+POST /chat
+
+Request
+
+{
+  "message": "policy POL1001"
+}
 
 
-Restart the server after setting the key.
+Response
+
+{
+  "agent": "Policy Agent",
+  "response": "This policy covers hospitalization up to ₹5L..."
+}
+
+🔹 CRM Dashboard
+
+GET /crm-dashboard
+
+Response
+
+{
+  "data": [
+    {
+      "name": "Rahul Sharma",
+      "phone": "9876543210",
+      "policy_type": "Health",
+      "policy_id": "POL1001",
+      "status": "Active"
+    }
+  ],
+  "total": 1,
+  "updated": "2026-01-30"
+}
+
+⚙️ Environment Variables
+Backend (backend/.env)
+GROQ_API_KEY=your_groq_key
+SUPABASE_URL=https://xxxx.supabase.co
+SUPABASE_KEY=your_supabase_key
+TWILIO_ACCOUNT_SID=ACxxxx
+TWILIO_AUTH_TOKEN=xxxx
+TWILIO_WHATSAPP_NUMBER=whatsapp:+14155238886
+
+Frontend (frontend/.env)
+VITE_API_BASE_URL=http://127.0.0.1:8000
 
 
+🚨 Never hardcode secrets — GitHub push protection is enabled.
 
-Create virtual environment
+▶️ Running the Project
+1️⃣ Backend
+cd backend
 python -m venv venv
-source venv/bin/activate   # Windows: venv\Scripts\activate
-
-Install dependencies
+venv\Scripts\activate     # Windows
 pip install -r requirements.txt
-
-Running the Server
 uvicorn main:app --reload
 
 
-Server will start at:
+Backend runs at:
+👉 http://127.0.0.1:8000
 
-http://127.0.0.1:8000
+2️⃣ Frontend
+cd frontend
+npm install
+npm run dev
 
-Example Usage
-Supervisor Call
-from agents.supervisor import supervisor
 
-response = supervisor(
-    user_input="What is the status of Amit Sharma's policy?",
-    crm_data=crm_data,
-    policy_data=policy_data
-)
+Frontend runs at:
+👉 http://localhost:5173
 
-Expected Data Formats
-CRM Data
-crm_data = [
-    {
-        "name": "Rohit Verma",
-        "phone": "9876543210",
-        "policy_id": "POL123",
-        "policy_type": "Life",
-        "status": "Active"
-    }
-]
+🧪 Example Commands to Try
+health quote CUST0001
+policy POL1001
+send reminders
+update CUST0001 phone 9876543210
 
-Policy Data
-policy_data = [
-    {
-        "name": "Amit Sharma",
-        "policy_id": "POL456",
-        "policy_type": "Health",
-        "status": "Active",
-        "expiry_date": "2026-03-15",
-        "premium": "₹12,000"
-    }
-]
+You’ll See:
 
-🛡️ Error Handling Guarantees
+Active agent highlighted
 
-✔ Missing API key → graceful fallback
-✔ Empty CRM / policy data → safe response
-✔ LangGraph tool errors → prevented
-✔ Always returns a string
-✔ Supervisor never crashes
+AI response in chat
 
-🧠 Design Principles
+Activity feed updated in real time
 
-Fail-safe by default
+CRM table refreshed automatically
 
-No guessing on data-based answers
+🧠 System Design (High Level)
+User → Frontend Chat
+     → POST /chat
+     → Supervisor Agent
+     → Specialized Agent
+     → Backend Response
+     → Frontend UI + Activity Feed
 
-Clear separation of concerns
+🔐 Security Best Practices
 
-Supervisor-driven intelligence
+✅ Secrets stored in environment variables
 
-Production-grade agent boundaries
+✅ No API keys exposed in frontend
 
-🛠️ Future Enhancements
+✅ GitHub secret scanning enabled
 
-🔐 Authentication & role-based access
+✅ Centralized backend request routing
 
-🗄️ Supabase / PostgreSQL integration
+🌟 Future Enhancements
 
-🔍 Vector search with embeddings
+Policy RAG using embeddings + vector database
 
-📈 Admin dashboard
+WebSocket-based live activity feed
 
-🌐 Frontend (React / Next.js)
+Agent confidence scoring
 
-📊 Analytics & logging
+Voice input for the Copilot
 
-📜 License
+Role-based dashboards (Admin / Agent / Customer)
 
-MIT License
-Free to use, modify, and distribute.
+👨‍💻 Author
 
-🙌 Acknowledgements
-
-Groq for ultra-fast inference
-
-LangChain & LangGraph for agent orchestration
-
-FastAPI for backend performance
-
+Shivendra
+Insurance AI Copilot – HackJNU Project
