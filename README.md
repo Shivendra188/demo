@@ -2,71 +2,7 @@
 
 An AI-powered Insurance Copilot that enables users to interact with insurance systems using natural language.
 The system intelligently routes requests to specialized AI agents for Quotes, Policy Queries, CRM Updates, and WhatsApp Reminders.
-
-Designed for hackathons, demos, and real-world fintech / insurtech use cases.
-
-🚀 Features
-🧠 Multi-Agent Architecture
-
-Supervisor Agent
-Detects user intent and routes the request to the correct agent
-
-Quote Agent
-Generates insurance quotes based on user input
-
-Policy Agent
-Answers questions from insurance policy documents (PDF-based)
-
-CRM Agent
-Updates and retrieves customer data using natural language commands
-
-Reminder Agent
-Sends WhatsApp renewal reminders automatically
-
-💬 AI Copilot Chat Interface
-
-Chat-style UI (ChatGPT-like experience)
-
-Displays which agent handled the request
-
-Real-time agent status panel
-
-Live activity feed for system actions and updates
-
-📊 CRM Dashboard
-
-View customers and their policies
-
-Policy status tracking: Active / Expired
-
-Auto-refreshing customer table
-
-Backend-driven, real-time data updates
-
-🏗️ Tech Stack
-🔹 Backend
-
-FastAPI (Python)
-
-LangChain + LangGraph
-
-Groq LLM (llama-3.1-8b-instant)
-
-Supabase (PostgreSQL)
-
-Twilio WhatsApp API
-
-PyMuPDF (PDF parsing)
-
-🔹 Frontend
-
-React + Vite
-
-Axios
-
-Tailwind CSS
-
-Component-based UI architecture
+<img width="1327" height="831" alt="image" src="https://github.com/user-attachments/assets/2ff8e525-2023-4ce2-9f79-0da095cad3f7" />
 
 📂 Project Structure
 hackjnu/
@@ -224,3 +160,4 @@ Role-based dashboards (Admin / Agent / Customer)
 
 Shivendra
 Insurance AI Copilot – HackJNU Project
+
