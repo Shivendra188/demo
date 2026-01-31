@@ -21,77 +21,65 @@ class State(TypedDict):
 
 # 🔥 DIRECT FUNCTIONS (unchanged - your Supabase fixes are correct)
 def calculate_premium(state: State):
-    """Premium calculation node."""
+    """Premium calculation node handles both Renewals and New Quotes."""
     last_msg = state["messages"][-1]
     
-    # Parse args from previous tool call
-    if hasattr(last_msg, 'tool_calls') and last_msg.tool_calls:
-        args = last_msg.tool_calls[0]['args']
-        customer_id = args.get('customer_id', 'CUST0001')
-        policy_type = args.get('policy_type', 'Health')
-    else:
-        # Fallback parse
-        content = last_msg.content.lower()
-        customer_match = re.search(r'(CUST\\d+)', content)
-        policy_match = re.search(r'(health|life|car)', content)
-        customer_id = customer_match.group() if customer_match else 'CUST0001'
-        policy_type = policy_match.group().title() if policy_match else 'Health'
-    
+    # Extraction logic (Simplified for brevity)
+    content = last_msg.content.lower()
+    customer_id = re.search(r'(CUST\d+)', content).group() if re.search(r'(CUST\d+)', content) else 'CUST0001'
+    policy_type = re.search(r'(health|life|car)', content).group().title() if re.search(r'(health|life|car)', content) else 'Health'
+
     try:
-        # Fetch data - FIXED: select() before eq()
-        customers = (
-            supabase.table("customers")
-            .select("*")
-            .eq("customer_id", customer_id)
-            .execute()
-        )
+        # 1. Fetch Customer
+        customers = supabase.table("customers").select("*").eq("customer_id", customer_id).execute()
         customer = customers.data[0] if customers.data else None
         
-        policies = (
-            supabase.table("policies")
-            .select("*")
-            .eq("customer_id", customer_id)
-            .eq("policy_type", policy_type)
-            .execute()
-        )
-        policy = policies.data[0] if policies.data else None
+        if not customer:
+            return {"messages": [ToolMessage(content=json.dumps({"error": "Customer not found"}), tool_call_id="premium_calc")]}
+
+        # 2. Check for existing Policy
+        policies = supabase.table("policies").select("*").eq("customer_id", customer_id).eq("policy_type", policy_type).execute()
+        existing_policy = policies.data[0] if policies.data else None
+
+        # 3. Calculation Constants
+        base = {"Health": 15000, "Life": 10000, "Car": 8000}.get(policy_type, 12000)
+        age_f = 1 + max(0, (customer.get("age", 30) - 25) * 0.015)
+        city_f = {"Delhi": 1.10, "Mumbai": 1.15, "Bangalore": 1.05}.get(customer.get("city"), 1.0)
+        claims_f = 1 + customer.get("claims_history", 0) * 0.20
+        inflation = 1.06
         
-        if not customer or not policy:
-            content = json.dumps({"error": f"No data for {customer_id}/{policy_type}"})
-        else:
-            # REAL CALC
-            base = {"Health": 15000, "Life": 10000, "Car": 8000}.get(policy_type, 12000)
-            age_f = 1 + max(0, (customer.get("age", 30) - 25) * 0.015)
-            city_f = {"Delhi": 1.10, "Mumbai": 1.15, "Bangalore": 1.05}.get(customer.get("city"), 1.0)
-            claims_f = 1 + customer.get("claims_history", 0) * 0.20
-            inflation = 1.06
-            
-            new_premium = round(base * age_f * city_f * claims_f * inflation)
-            hike = round((new_premium / float(policy["premium"]) - 1) * 100)
-            
-            content = json.dumps({
-                "quote_id": f"Q{customer_id[-3:]}-{date.today().strftime('%y%m')}",
-                "customer": customer["name"],
-                "risk": {
-                    "age": f"{customer.get('age', '?')} → {age_f:.2f}x",
-                    "city": f"{customer.get('city', '?')} → {city_f:.2f}x",
-                    "claims": f"{customer.get('claims_history', 0)} → {claims_f:.2f}x"
-                },
-                "current": f"₹{float(policy['premium']):,.0f}",
-                "new": f"₹{new_premium:,.0f}/yr",
+        new_premium = round(base * age_f * city_f * claims_f * inflation)
+        
+        # 4. Response Logic (Branching)
+        response_data = {
+            "quote_id": f"Q{customer_id[-3:]}-{date.today().strftime('%y%m')}",
+            "customer": customer["name"],
+            "policy_type": policy_type,
+            "calculated_premium": f"₹{new_premium:,.0f}/yr"
+        }
+
+        if existing_policy:
+            # RENEWAL CASE
+            current_p = float(existing_policy['premium'])
+            hike = round((new_premium / current_p - 1) * 100)
+            response_data.update({
+                "type": "RENEWAL",
+                "current_premium": f"₹{current_p:,.0f}",
                 "hike": f"{hike}% ↑"
             })
-    
+        else:
+            # NEW POLICY CASE
+            response_data.update({
+                "type": "NEW_POLICY_QUOTE",
+                "note": "No existing policy found. This is a fresh quote."
+            })
+
+        content = json.dumps(response_data)
+
     except Exception as e:
         content = json.dumps({"error": str(e)})
     
-    return {
-        "messages": [ToolMessage(
-            content=content,
-            tool_call_id="premium_calc",
-            name="calculate_premium"
-        )]
-    }
+    return {"messages": [ToolMessage(content=content, tool_call_id="premium_calc", name="calculate_premium")]}
 
 def crm_update_node(state: State):
     """CRM update node."""
@@ -99,7 +87,7 @@ def crm_update_node(state: State):
     args = last_msg.tool_calls[0]['args'] if last_msg.tool_calls else {}
     
     customer_id = args.get('customer_id')
-    updates = {k: args[k] for k in ['phone', 'name', 'email'] if k in args}
+    updates = {k: args[k] for k in ['phone', 'name'] if k in args}
     
     if updates:
         result = (

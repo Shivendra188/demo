@@ -45,27 +45,36 @@ def policy_search_node(state: State):
 def policy_update_node(state: State):
     """Update: lapse/renew status + expiry."""
     msg = state["messages"][-1].content.lower()
-    pol_match = re.search(r'(POL\d+)', msg)
+    
+    # FIXED REGEX: Matches POL1001, POL1038 (your real data)
+    pol_match = re.search(r'(POL\d{4})', msg)
     
     if not pol_match:
-        content = "❌ Specify policy_id (POL123)"
+        content = "❌ Policy ID format: POLxxxx (e.g., POL1038, POL1001)"
         return {"messages": [ToolMessage(content=content, tool_call_id="policy_update")]}
     
-    pol_id = pol_match.group()
+    pol_id = pol_match.group().upper()
+    
     if 'renew' in msg:
         updates = {
             "status": "Active",
             "expiry_date": (date.today() + timedelta(days=365)).isoformat()
         }
-    elif 'lapse' in msg:
+    elif 'lapse' in msg or 'lapsed' in msg:
         updates = {"status": "Lapsed"}
     else:
-        content = "❌ Use 'renew' or 'lapse'"
+        content = "❌ Commands: 'renew [POLxxxx]' or 'lapse [POLxxxx]'"
         return {"messages": [ToolMessage(content=content, tool_call_id="policy_update")]}
     
     try:
+        # Verify policy exists first
+        policy_check = supabase.table("policies").select("policy_id").eq("policy_id", pol_id).execute()
+        if not policy_check.data:
+            content = f"❌ {pol_id} not found"
+            return {"messages": [ToolMessage(content=content, tool_call_id="policy_update")]}
+        
         result = supabase.table("policies").update(updates).eq("policy_id", pol_id).execute()
-        content = f"✅ {pol_id} {updates['status']}" if result.data else "❌ Update failed"
+        content = f"✅ {pol_id} → {updates['status']} (expiry: {updates.get('expiry_date', 'unchanged')})"
     except Exception as e:
         content = f"❌ Error: {str(e)}"
     
@@ -73,11 +82,19 @@ def policy_update_node(state: State):
 
 def router_node(state: State) -> dict:
     msg = state["messages"][-1].content.lower()
-    if any(word in msg for word in ['search', 'find', 'expiring']):
-        return {"next": "policy_search"}
-    elif any(word in msg for word in ['update', 'renew', 'lapse']):
+    
+    # FIXED: Broader policy_id match + keywords
+    pol_match = re.search(r'(POL\d{4})', msg)
+    
+    if pol_match and 'renew' in msg:
+        return {"next": "policy_update"}  # Direct to update
+    if pol_match and ('lapse' in msg or 'status' in msg):
         return {"next": "policy_update"}
-    return {"next": "agent"}
+    if any(word in msg for word in ['search', 'find', 'expiring', 'list']):
+        return {"next": "policy_search"}
+    
+    return {"next": "agent"}  # Fallback LLM
+
 
 def agent_llm(state: State):
     messages = state["messages"][-1:]
