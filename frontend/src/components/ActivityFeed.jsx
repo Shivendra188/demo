@@ -1,21 +1,7 @@
-import { useState, useEffect } from "react";
+import { useActivity } from "../context/ActivityContext";
 
-export default function ActivityFeed({ activity }) {
-  const [activityLog, setActivityLog] = useState([]);
-
-  // Normalize backend activity
-  useEffect(() => {
-    if (!activity) return;
-
-    const formattedActivity = {
-      agent: activity.task_type || "SYSTEM",
-      status: "success",
-      action: activity.response,
-      time: new Date().toLocaleTimeString(),
-    };
-
-    setActivityLog((prev) => [formattedActivity, ...prev].slice(0, 10));
-  }, [activity]);
+export default function ActivityFeed() {
+  const { activityLog } = useActivity();
 
   const getIcon = (status) => {
     if (status === "success") return "🟢";
@@ -39,14 +25,14 @@ export default function ActivityFeed({ activity }) {
       <div className="p-4 space-y-3 overflow-y-auto max-h-[32rem]">
         {activityLog.length === 0 && (
           <div className="text-center text-slate-500 text-sm py-10">
-            Send a command to see agent activity
+            No activity yet
           </div>
         )}
 
         {activityLog.map((a, i) => (
           <div
             key={i}
-            className="p-4 rounded-xl bg-slate-900 border border-slate-800 hover:border-amber-400/50 transition"
+            className="p-4 rounded-xl bg-slate-900 border border-slate-800"
           >
             <div className="flex items-start gap-3">
               <div className="text-lg">{getIcon(a.status)}</div>

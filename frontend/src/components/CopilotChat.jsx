@@ -1,9 +1,11 @@
 import { useState, useRef, useEffect } from "react";
 import { sendCommand } from "../services/api";
+import { useActivity } from "../context/ActivityContext";
 
 const AGENTS = [
   "Quote Agent",
   "Policy Agent",
+  "Policy Data Agent",
   "CRM Agent",
   "Reminder Agent",
 ];
@@ -11,17 +13,20 @@ const AGENTS = [
 const AGENT_MAP = {
   QUOTE: "Quote Agent",
   POLICY: "Policy Agent",
+  POLICY_DATA: "Policy Data Agent",
   CRM: "CRM Agent",
   REMINDER: "Reminder Agent",
+  UNKNOWN: "System",
 };
 
-export default function CopilotChat() {
+export default function CopilotChat({ onActivity }) {
+  const { pushActivity } = useActivity();
   const [messages, setMessages] = useState([
     {
       role: "agent",
       agent: "Copilot",
       content:
-        "Hello! I’m your AI Insurance Copilot.\n\nTry:\n• health quote CUST0001\n• policy POL1001\n• send reminders\n• update CUST0001 phone 9876543210",
+        "👋 Hello! I’m your AI Insurance Copilot.\n\nTry commands like:\n• health quote CUST0001\n• policy POL1025\n• policy status POL1025\n• update CUST0001 phone 9876543210\n• send reminders",
       time: new Date().toLocaleTimeString(),
     },
   ]);
@@ -31,6 +36,7 @@ export default function CopilotChat() {
   const [loading, setLoading] = useState(false);
   const bottomRef = useRef(null);
 
+  // Auto-scroll
   useEffect(() => {
     bottomRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages]);
@@ -40,7 +46,7 @@ export default function CopilotChat() {
 
     const userMessage = {
       role: "user",
-      content: input,
+      content: input.trim(),
       time: new Date().toLocaleTimeString(),
     };
 
@@ -52,38 +58,47 @@ export default function CopilotChat() {
     try {
       const res = await sendCommand(userMessage.content);
 
-      const agentName =
-        AGENT_MAP[res?.task_type] || "AI Agent";
-
+      const taskType = res?.taskType || "UNKNOWN";
+      const agentName = AGENT_MAP[taskType] || "AI Agent";
       const agentResponse =
-        res?.response ||
-        res?.message ||
-        "✅ Command executed successfully.";
+        res?.response || "✅ Command executed successfully.";
 
       setActiveAgent(agentName);
+      setTimeout(() => setActiveAgent(null), 4000);
 
-      // auto-reset agent status after 5s
-      setTimeout(() => setActiveAgent(null), 5000);
+      const agentMessage = {
+        role: "agent",
+        agent: agentName,
+        content: agentResponse,
+        time: new Date().toLocaleTimeString(),
+      };
 
-      setMessages((prev) => [
-        ...prev,
-        {
-          role: "agent",
-          agent: agentName,
-          content: agentResponse,
-          time: new Date().toLocaleTimeString(),
-        },
-      ]);
+      setMessages((prev) => [...prev, agentMessage]);
+
+      // ✅ SEND TO ACTIVITY FEED
+      onActivity?.({
+        task_type: taskType,
+        response: agentResponse,
+      });
+
     } catch (err) {
-      setMessages((prev) => [
-        ...prev,
-        {
-          role: "agent",
-          agent: "System",
-          content: `❌ ${err}`,
-          time: new Date().toLocaleTimeString(),
-        },
-      ]);
+      const errorText =
+        err?.message || "Something went wrong while executing the command.";
+
+      const errorMessage = {
+        role: "agent",
+        agent: "System",
+        content: `❌ ${errorText}`,
+        time: new Date().toLocaleTimeString(),
+      };
+
+      setMessages((prev) => [...prev, errorMessage]);
+
+      // ✅ LOG ERROR TO ACTIVITY FEED
+      onActivity?.({
+        task_type: "ERROR",
+        response: errorText,
+      });
     } finally {
       setLoading(false);
     }
@@ -92,15 +107,17 @@ export default function CopilotChat() {
   return (
     <div className="flex h-full bg-gradient-to-br from-slate-950 to-slate-900 rounded-2xl overflow-hidden border border-slate-800">
 
-      {/* Chat Section */}
+      {/* ================= CHAT ================= */}
       <div className="flex flex-col flex-1">
+        {/* Header */}
         <div className="p-5 border-b border-slate-800">
-          <h2 className="text-xl font-bold text-white">AI Copilot</h2>
+          <h2 className="text-xl font-bold text-white">🤖 AI Insurance Copilot</h2>
           <p className="text-sm text-slate-400">
             Natural language insurance operations
           </p>
         </div>
 
+        {/* Messages */}
         <div className="flex-1 p-5 overflow-y-auto space-y-4">
           {messages.map((m, i) => (
             <div
@@ -124,6 +141,7 @@ export default function CopilotChat() {
               >
                 {m.content}
               </div>
+
               <span className="text-xs text-slate-500">{m.time}</span>
             </div>
           ))}
@@ -137,6 +155,7 @@ export default function CopilotChat() {
           <div ref={bottomRef} />
         </div>
 
+        {/* Input */}
         <div className="p-4 border-t border-slate-800 flex gap-3">
           <input
             value={input}
@@ -156,10 +175,10 @@ export default function CopilotChat() {
         </div>
       </div>
 
-      {/* Agent Status Panel */}
+      {/* ================= AGENT STATUS ================= */}
       <div className="w-72 border-l border-slate-800 p-4 bg-slate-950">
         <h3 className="text-sm font-semibold text-white mb-4">
-          AI Agents Status
+          🧠 AI Agents Status
         </h3>
 
         {AGENTS.map((agent) => (
@@ -176,7 +195,7 @@ export default function CopilotChat() {
         ))}
 
         <div className="mt-6 text-xs text-emerald-400">
-          ● All systems operational
+          ● Backend connected
         </div>
       </div>
     </div>
