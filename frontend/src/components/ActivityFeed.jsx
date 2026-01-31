@@ -3,11 +3,18 @@ import { useState, useEffect } from "react";
 export default function ActivityFeed({ activity }) {
   const [activityLog, setActivityLog] = useState([]);
 
-  // Keep last 10 activities
+  // Normalize backend activity
   useEffect(() => {
-    if (activity) {
-      setActivityLog((prev) => [activity, ...prev].slice(0, 10));
-    }
+    if (!activity) return;
+
+    const formattedActivity = {
+      agent: activity.task_type || "SYSTEM",
+      status: "success",
+      action: activity.response,
+      time: new Date().toLocaleTimeString(),
+    };
+
+    setActivityLog((prev) => [formattedActivity, ...prev].slice(0, 10));
   }, [activity]);
 
   const getIcon = (status) => {
@@ -47,22 +54,16 @@ export default function ActivityFeed({ activity }) {
               <div className="flex-1">
                 <div className="flex justify-between items-center">
                   <span className="text-sm font-semibold text-white">
-                    {a.agent}
+                    🤖 {a.agent}
                   </span>
                   <span className="text-[11px] text-slate-500">
                     {a.time}
                   </span>
                 </div>
 
-                <p className="text-xs text-slate-300 mt-1">
+                <p className="text-xs text-slate-300 mt-1 whitespace-pre-line">
                   {a.action}
                 </p>
-
-                {a.duration && (
-                  <p className="text-[11px] text-slate-500 mt-1">
-                    ⏱ {a.duration}
-                  </p>
-                )}
               </div>
             </div>
           </div>
@@ -71,7 +72,7 @@ export default function ActivityFeed({ activity }) {
 
       {/* Footer */}
       <div className="p-3 border-t border-slate-800 text-xs text-emerald-400">
-        ● All systems operational
+        ● Backend connected
       </div>
     </div>
   );

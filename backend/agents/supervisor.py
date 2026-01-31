@@ -1,33 +1,29 @@
+def route_task(user_input: str) -> str:
+    """
+    Decide which agent should handle the request.
+    This file MUST stay dependency-free.
+    """
 
-
-from agents.policy_agent import run_policy_agent
-from agents.quote_agent import run_quote
-
-def route_task(user_input: str):
     text = user_input.lower()
 
-    quote_keywords = [
-        "quote", "price", "premium", "cost", "insurance plan"
-    ]
+    # Policy number specific queries
+    if "pol" in text:
+        return "POLICY_DATA"
 
-    policy_keywords = [
-        "policy", "coverage", "benefits", "claim",
-        "exclusion", "renewal", "insured"
-    ]
+    # Quote related
+    if any(k in text for k in ["quote", "price", "premium", "cost"]):
+        return "QUOTE"
 
-    if any(word in text for word in quote_keywords):
-        return {
-            "task": "QUOTE",
-            "response": run_quote(user_input)
-        }
+    # General policy questions
+    if any(k in text for k in ["policy", "coverage", "benefit", "claim", "renew"]):
+        return "POLICY"
 
-    if any(word in text for word in policy_keywords):
-        return {
-            "task": "POLICY",
-            "response": run_policy_agent(user_input)
-        }
+    # Reminder
+    if any(k in text for k in ["remind", "reminder"]):
+        return "REMINDER"
 
-    return {
-        "task": "SUPERVISOR",
-        "response": "I can help with policy details or insurance quotes."
-    }
+    # CRM
+    if any(k in text for k in ["crm", "customer"]):
+        return "CRM"
+
+    return "UNKNOWN"

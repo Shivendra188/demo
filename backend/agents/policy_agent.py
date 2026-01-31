@@ -1,124 +1,74 @@
-# backend/agents/policy_agent.py
-from typing import TypedDict, Annotated, Sequence
-from langchain_core.messages import BaseMessage, HumanMessage, ToolMessage
-from langchain_groq import ChatGroq
-from langgraph.graph import StateGraph, END, START
-import operator
-import re
-import json
-from datetime import date, timedelta
-from supabase import create_client
 import os
+from typing import Optional
+from langchain_groq import ChatGroq
 
-supabase = create_client(os.getenv("SUPABASE_URL"), os.getenv("SUPABASE_KEY"))
-llm = ChatGroq(groq_api_key=os.getenv("GROQ_API_KEY"), model_name="llama-3.1-8b-instant")
+# =========================
+# LOAD GROQ API KEY
+# =========================
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
-class State(TypedDict):
-    messages: Annotated[Sequence[BaseMessage], operator.add]
+# =========================
+# INITIALIZE LLM SAFELY
+# =========================
+llm: Optional[ChatGroq] = None
 
-def policy_search_node(state: State):
-    """Search policies (expiring, by type/customer)."""
-    msg = state["messages"][-1].content.lower()
-    # Parse: "expiring", "car CUST0001", "POL123"
-    pol_match = re.search(r'(POL\d+)', msg)
-    cust_match = re.search(r'(CUST\d+)', msg)
-    
+if GROQ_API_KEY:
     try:
-        if 'expiring' in msg:
-            # Expiring in <30 days
-            policies = supabase.table("policies").select("policy_id, policy_type, customer_id, customers(name), expiry_date").lte("expiry_date", (date.today() + timedelta(days=30)).isoformat()).execute()
-        elif pol_match:
-            pol_id = pol_match.group()
-            policies = supabase.table("policies").select("*").eq("policy_id", pol_id).execute()
-        elif cust_match:
-            cust_id = cust_match.group()
-            policies = supabase.table("policies").select("*").eq("customer_id", cust_id).execute()
-        else:
-            policies = supabase.table("policies").select("policy_id, policy_type, customer_id").limit(5).execute()
-        
-        content = json.dumps({"policies": policies.data}) if policies.data else "No policies found"
-    except Exception as e:
-        content = json.dumps({"error": str(e)})
-    
-    return {"messages": [ToolMessage(content=content, tool_call_id="policy_search")]}
+        llm = ChatGroq(
+            api_key=GROQ_API_KEY,
+            model="llama-3.1-8b-instant",
+            temperature=0.2,
+            max_tokens=400,
+        )
+    except Exception:
+        llm = None
 
-def policy_update_node(state: State):
-    """Update: lapse/renew status + expiry."""
-    msg = state["messages"][-1].content.lower()
-    
-    # FIXED REGEX: Matches POL1001, POL1038 (your real data)
-    pol_match = re.search(r'(POL\d{4})', msg)
-    
-    if not pol_match:
-        content = "❌ Policy ID format: POLxxxx (e.g., POL1038, POL1001)"
-        return {"messages": [ToolMessage(content=content, tool_call_id="policy_update")]}
-    
-    pol_id = pol_match.group().upper()
-    
-    if 'renew' in msg:
-        updates = {
-            "status": "Active",
-            "expiry_date": (date.today() + timedelta(days=365)).isoformat()
-        }
-    elif 'lapse' in msg or 'lapsed' in msg:
-        updates = {"status": "Lapsed"}
-    else:
-        content = "❌ Commands: 'renew [POLxxxx]' or 'lapse [POLxxxx]'"
-        return {"messages": [ToolMessage(content=content, tool_call_id="policy_update")]}
-    
+# =========================
+# MAIN POLICY AGENT
+# (REQUIRED BY supervisor.py)
+# =========================
+def handle_policy_query(user_input: str) -> str:
+    """
+    Handles insurance policy-related questions such as:
+    coverage, benefits, claims, renewal, exclusions, etc.
+    """
+
+    # ---------- API key missing or model init failed ----------
+    if llm is None:
+        return (
+            "Policy information service is temporarily unavailable. "
+            "Please try again later."
+        )
+
+    # ---------- Empty input safety ----------
+    if not user_input or not user_input.strip():
+        return "Please ask a valid policy-related question."
+
     try:
-        # Verify policy exists first
-        policy_check = supabase.table("policies").select("policy_id").eq("policy_id", pol_id).execute()
-        if not policy_check.data:
-            content = f"❌ {pol_id} not found"
-            return {"messages": [ToolMessage(content=content, tool_call_id="policy_update")]}
-        
-        result = supabase.table("policies").update(updates).eq("policy_id", pol_id).execute()
-        content = f"✅ {pol_id} → {updates['status']} (expiry: {updates.get('expiry_date', 'unchanged')})"
-    except Exception as e:
-        content = f"❌ Error: {str(e)}"
-    
-    return {"messages": [ToolMessage(content=content, tool_call_id="policy_update")]}
+        response = llm.invoke(
+            f"""
+You are an insurance policy assistant.
 
-def router_node(state: State) -> dict:
-    msg = state["messages"][-1].content.lower()
-    
-    # FIXED: Broader policy_id match + keywords
-    pol_match = re.search(r'(POL\d{4})', msg)
-    
-    if pol_match and 'renew' in msg:
-        return {"next": "policy_update"}  # Direct to update
-    if pol_match and ('lapse' in msg or 'status' in msg):
-        return {"next": "policy_update"}
-    if any(word in msg for word in ['search', 'find', 'expiring', 'list']):
-        return {"next": "policy_search"}
-    
-    return {"next": "agent"}  # Fallback LLM
+Answer the user's question clearly and briefly.
+Avoid legal jargon.
+Keep the answer short and helpful.
 
+User question:
+{user_input}
 
-def agent_llm(state: State):
-    messages = state["messages"][-1:]
-    return {"messages": [llm.invoke(messages)]}
+Limit the response to a maximum of 4 lines.
+"""
+        )
 
-# Graph
-workflow = StateGraph(State)
-workflow.add_node("router", router_node)
-workflow.add_node("policy_search", policy_search_node)
-workflow.add_node("policy_update", policy_update_node)
-workflow.add_node("agent", agent_llm)
+        # LangChain safety: ensure content exists
+        if hasattr(response, "content") and response.content:
+            return response.content.strip()
 
-workflow.add_edge(START, "router")
-workflow.add_conditional_edges(
-    "router",
-    lambda s: router_node(s)["next"],
-    {"policy_search": "policy_search", "policy_update": "policy_update", "agent": "agent"}
-)
-workflow.add_edge("policy_search", END)
-workflow.add_edge("policy_update", END)
-workflow.add_edge("agent", END)
+        return "I couldn't generate a response for your policy question."
 
-policy_agent = workflow.compile()
-
-def run_policy_agent(user_input: str):
-    result = policy_agent.invoke({"messages": [HumanMessage(content=user_input)]})
-    return result["messages"][-1].content
+    # ---------- Any Groq / LangChain failure ----------
+    except Exception:
+        return (
+            "Sorry, I’m unable to answer your policy question right now. "
+            "Please try again later."
+        )

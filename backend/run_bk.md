@@ -12,3 +12,8 @@ uvicorn main:app --reload
 env("https://ljepgqjlwtvxotzgdikp.supabase.com"),
     os.getenv("sb_publishable_FJWN3AMGacjf45jCfhVyAA_ZrAUmQGg")
 )
+
+{
+  "message": "check policy POL1038",
+  "policy_number": "POL1038"
+}

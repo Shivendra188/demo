@@ -1,126 +1,121 @@
-from typing import TypedDict, Annotated, Sequence
-from langchain_core.messages import BaseMessage, HumanMessage, AIMessage, ToolMessage
+import os
+from typing import List, Dict, Optional
 from langchain_groq import ChatGroq
 from langgraph.graph import StateGraph, END
-from langgraph.prebuilt import ToolNode, tools_condition
-import operator
-import re
-import os
+from langgraph.prebuilt import ToolNode
 
-# Import TOOLS
-from tools.crm import crm_update
-from  .quote_agent import calculate_premium  # ✅ New tool
+# =========================
+# LOAD GROQ API KEY
+# =========================
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 
-tools = [crm_update, calculate_premium]  # ✅ Real tool
+# =========================
+# SAFE LLM INIT
+# =========================
+llm: Optional[ChatGroq] = None
 
-# State
-class AgentState(TypedDict):
-    messages: Annotated[Sequence[BaseMessage], operator.add]
+if GROQ_API_KEY:
+    try:
+        llm = ChatGroq(
+            api_key=GROQ_API_KEY,
+            model="llama-3.1-8b-instant",
+            temperature=0.1,
+            max_tokens=300,
+        )
+    except Exception:
+        llm = None
 
-# LLM + TOOLS
-llm = ChatGroq(
-    groq_api_key=os.getenv("GROQ_API_KEY"),
-    model_name="llama-3.1-8b-instant"
-)
 
-llm_with_tools = llm.bind_tools(tools)
+# =========================
+# TOOL FUNCTIONS (MUST HAVE DOCSTRINGS)
+# =========================
+def lookup_customer(name: str, crm_data: List[Dict]) -> str:
+    """
+    Look up a customer by name from CRM records.
+    Returns customer details if found.
+    """
+    for c in crm_data:
+        if c.get("name", "").lower() == name.lower():
+            return str(c)
+    return "Customer not found in records."
 
-# 🔥 FIXED PARSER - Handles QUOTE + UPDATE
-def crm_parser(state: AgentState):
-    user_input = state["messages"][-1].content.lower()
-    
-    # ✅ FIXED: Quote pattern - CUST optional now
-    quote_match = re.search(r"(?:renew|quote|get)\s*(health|life|car)?(?:\s+(CUST\d+))?", user_input)
-    if quote_match:
-        policy_type = quote_match.group(1)
-        customer_id = quote_match.group(2) or "CUST0001"  # Default
-        
-        tool_input = {"customer_id": customer_id}
-        if policy_type: 
-            tool_input["policy_type"] = policy_type.title()
-        
-        return {
-            "messages": [AIMessage(
-                content=f"🔄 Quote for {customer_id} ({tool_input.get('policy_type', 'any')})",
-                tool_calls=[{
-                    "name": "generate_quote",
-                    "args": tool_input,
-                    "id": f"quote_{customer_id}"
-                }]
-            )]
-        }
-    
-    # Rest of update logic...
 
-    
-    # 2. UPDATE commands
-    update_patterns = [
-        r"(?:update|change|set)\s+(CUST\d+)\s+(phone|name|email)\s+(.+?)(?:\s|$)",
-        r"(?:update|change|set)\s+(CUST\d+)\s+(.+?)\s+to\s+(.+?)(?:\s|$)"
-    ]
-    
-    for pattern in update_patterns:
-        match = re.search(pattern, user_input, re.IGNORECASE)
-        if match:
-            customer_id, field_type, field_value = match.groups()
-            tool_input = {"customer_id": customer_id}
-            tool_input[field_type] = field_value.strip()
-            
-            return {
-                "messages": [AIMessage(
-                    content=f"✅ Updating {customer_id} {field_type} → {field_value}",
-                    tool_calls=[{
-                        "name": "crm_update",
-                        "args": tool_input,
-                        "id": f"update_{customer_id}"
-                    }]
-                )]
-            }
-    
-    # ❌ Invalid command
-    return {
-        "messages": [AIMessage(content="""❌ Commands:
-• `quote health CUST0001` - Get renewal quote
-• `update CUST0001 phone 9876543210` - Update details""")]
-    }
+def list_active_customers(crm_data: List[Dict]) -> str:
+    """
+    List all active customers from CRM records.
+    """
+    active = [c for c in crm_data if c.get("status") == "Active"]
+    return str(active) if active else "No active customers found."
 
-# Agent handles tool responses
-def agent_node(state: AgentState):
-    """Process tool results."""
-    messages = state["messages"]
-    last_message = messages[-1]
-    
-    if isinstance(last_message, ToolMessage):
-        # Quote result → Offer WhatsApp/send
-        if "quote_id" in last_message.content:
-            return {
-                "messages": [AIMessage(content="✅ Quote ready! Send via WhatsApp? Reply 'send'")]
-            }
-        return {
-            "messages": [AIMessage(content="✅ CRM operation completed!")]
-        }
-    
-    return {"messages": [llm_with_tools.invoke(messages)]}
 
-# Router
-def route_crm(state: AgentState):
-    last_message = state["messages"][-1]
-    return "tools" if last_message.tool_calls else END
+# =========================
+# TOOLS LIST (IMPORTANT)
+# =========================
+tools = [lookup_customer, list_active_customers]
 
-# 🛠️ BUILD GRAPH
-workflow = StateGraph(AgentState)
-workflow.add_node("parser", crm_parser)
+
+# =========================
+# AGENT STATE
+# =========================
+def crm_agent(state: Dict) -> Dict:
+    """
+    CRM agent logic that decides how to answer the user query.
+    """
+    user_input = state.get("input", "")
+    crm_data = state.get("crm_data", [])
+
+    if not user_input:
+        return {"output": "Please ask a valid CRM question."}
+
+    if not crm_data:
+        return {"output": "No CRM data available."}
+
+    if llm is None:
+        return {"output": "CRM service temporarily unavailable."}
+
+    response = llm.invoke(
+        f"""
+You are a CRM assistant.
+
+User question:
+{user_input}
+
+Available CRM data:
+{crm_data}
+
+Respond briefly.
+"""
+    )
+
+    return {"output": response.content}
+
+
+# =========================
+# LANGGRAPH WORKFLOW
+# =========================
+workflow = StateGraph(dict)
+
+workflow.add_node("crm_agent", crm_agent)
 workflow.add_node("tools", ToolNode(tools))
-workflow.add_node("agent", agent_node)
 
-workflow.set_entry_point("parser")
-workflow.add_conditional_edges("parser", route_crm, {"tools": "tools", "__end__": END})
-workflow.add_conditional_edges("tools", tools_condition, {"agent": "agent", "__end__": END})
-workflow.add_edge("agent", END)
+workflow.set_entry_point("crm_agent")
+workflow.add_edge("crm_agent", END)
 
-crm_graph = workflow.compile()  # ✅ No recursion_limit needed
+graph = workflow.compile()
 
-def run_crm_agent(user_input: str):
-    """Run agent."""
-    result = crm_graph.invoke({"messages": [HumanMessage(content=user_input)]})
-    return result["messages"][-1].content
+
+# =========================
+# PUBLIC ENTRY POINT
+# (USED BY main.py)
+# =========================
+def run_crm_agent(user_input: str, crm_data: List[Dict]) -> str:
+    """
+    Entry point to run the CRM agent workflow.
+    """
+    result = graph.invoke(
+        {
+            "input": user_input,
+            "crm_data": crm_data,
+        }
+    )
+    return result.get("output", "No response generated.")

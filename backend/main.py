@@ -1,29 +1,40 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-from typing import Dict
+from typing import Optional
 from datetime import date
 import os
 from dotenv import load_dotenv
 
-
-# Load environment variables
+# =========================
+# LOAD ENV
+# =========================
 load_dotenv()
 
-# ===== Agents =====
+# =========================
+# AGENTS
+# =========================
 from agents.supervisor import route_task
-from agents.quote_agent import run_quote  # ✅ New import
-from agents.policy_agent import run_policy_agent
+from agents.policy_agent import handle_policy_query
+from agents.policy_data_agent import handle_policy_data_query
+from agents.quote_agent import generate_quote
 from agents.reminder_agent import run_reminder_agent
 from agents.crm_agent import run_crm_agent
 
-# ===== Services =====
+# =========================
+# SERVICES
+# =========================
 from services.whatsapp import send_whatsapp_message
 from supabase import create_client
 
+# =========================
+# APP
+# =========================
 app = FastAPI()
 
-# ===== CORS =====
+# =========================
+# CORS
+# =========================
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -32,114 +43,103 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# ===== Models =====
+# =========================
+# MODELS
+# =========================
 class ChatRequest(BaseModel):
     message: str
-    policy_number: str | None = None
+    policy_number: Optional[str] = None
 
 class WhatsAppMessage(BaseModel):
     phone: str
     message: str
 
-# ===== Root =====
+# =========================
+# ROOT
+# =========================
 @app.get("/")
 def root():
     return {"status": "Insurance AI Copilot Backend Running"}
 
-# ===== Chat =====
+# =========================
+# CHAT (MAIN ENTRY)
+# =========================
 @app.post("/chat")
 def chat(request: ChatRequest):
     task = route_task(request.message)
+    message = request.message
 
-    if task == "QUOTE":
-        return run_quote(request.dict())
+    if task == "POLICY_DATA":
+        return {
+            "task_type": "POLICY_DATA",
+            "response": handle_policy_data_query(message),
+        }
 
     if task == "POLICY":
-        answer = run_policy_agent(request.message)
         return {
-            "response": answer,
-            "task_type": "POLICY"
+            "task_type": "POLICY",
+            "response": handle_policy_query(message),
+        }
+
+    if task == "QUOTE":
+        return {
+            "task_type": "QUOTE",
+            "response": generate_quote(request.model_dump()),
         }
 
     if task == "REMINDER":
-        result = run_reminder_agent(request.message)
         return {
-            "response": result,
-            "task_type": "REMINDER"
+            "task_type": "REMINDER",
+            "response": run_reminder_agent(message),
         }
 
     if task == "CRM":
-        result = run_crm_agent(request.message)
         return {
-            "response": result,
-            "task_type": "CRM"
+            "task_type": "CRM",
+            "response": run_crm_agent(message),
         }
 
-    return {"error": "Could not understand request"}
+    return {
+        "task_type": "UNKNOWN",
+        "response": "I can help with policy details, policy numbers, or insurance quotes.",
+    }
 
-# ===== Supabase (SECURE) =====
- 
-
+# =========================
+# SUPABASE
+# =========================
 supabase = create_client(
     os.getenv("SUPABASE_URL"),
     os.getenv("SUPABASE_KEY")
 )
 
-
-# ===== CRM Dashboard =====
+# =========================
+# CRM DASHBOARD
+# =========================
 @app.get("/crm-dashboard")
 def crm_dashboard():
     try:
-        # 1. Fetch data
         response = (
             supabase.table("policies")
             .select("*, customers(*)")
             .limit(50)
             .execute()
         )
-        
-        # Check if response has data attribute
-        data = response.data if hasattr(response, 'data') else response
-        
-        print(f"DEBUG: Raw data count: {len(data) if data else 0}")
 
+        data = response.data or []
         today = date.today()
         table_data = []
 
-        if not data:
-            return {"data": [], "total": 0}
-
         for row in data:
-            # Match CSV column names exactly
-            # Your CSV shows 'expiry_date', not 'policy_expiry'
             expiry = row.get("expiry_date")
             status = row.get("status", "Active")
 
-            if expiry:
-                try:
-                    # Handle different date formats (YYYY-MM-DD vs D/M/YYYY)
-                    # If date is '4/3/2026', string comparison might fail. 
-                    # For now, we'll keep it simple:
-                    if str(expiry) < str(today):
-                        status = "Expired"
-                except:
-                    pass
+            if expiry and str(expiry) < str(today):
+                status = "Expired"
 
-            # Safe navigation for the joined customer table
-            customer_info = row.get("customers")
-            
-            # This handles cases where customer_id in policies doesn't match 
-            # any record in the customers table
-            if isinstance(customer_info, dict):
-                customer_name = customer_info.get("name", "Unknown")
-                customer_phone = customer_info.get("phone", "N/A")
-            else:
-                customer_name = "Unknown (Missing Link)"
-                customer_phone = "N/A"
-
+            customer = row.get("customers") or {}
             table_data.append({
-                "name": customer_name,
-                "phone": customer_phone,
+                "name": customer.get("name", "Unknown"),
+                "phone": customer.get("phone", "N/A"),
                 "policy_type": row.get("policy_type", "N/A"),
                 "policy_id": row.get("policy_id", "N/A"),
                 "status": status,
@@ -148,42 +148,33 @@ def crm_dashboard():
         return {
             "data": table_data,
             "total": len(table_data),
-            "updated": str(today)
+            "updated": str(today),
         }
 
     except Exception as e:
-        # This will print the EXACT error in your terminal
-        print(f"CRITICAL ERROR: {str(e)}")
         return {"error": str(e), "data": []}
 
-# ===== Customers =====
+# =========================
+# CUSTOMERS
+# =========================
 @app.get("/customers")
 def get_customers(limit: int = 10):
     return supabase.table("customers").select("*").limit(limit).execute().data
 
-# ===== Policies =====
+# =========================
+# POLICIES
+# =========================
 @app.get("/policies")
 def get_policies(limit: int = 10):
     return supabase.table("policies").select("*").limit(limit).execute().data
 
-# ===== Expiring =====
-@app.get("/expiring")
-def expiring():
-    return (
-        supabase.table("policies")
-        .select("*, customers(name)")
-        .lte("policy_expiry", "2026-02-28")
-        .execute()
-        .data
-    )
-
-# ===== WhatsApp =====
+# =========================
+# WHATSAPP
+# =========================
 @app.post("/send-reminder")
 def send_reminder(msg: WhatsAppMessage):
     send_whatsapp_message(msg)
     return {"status": "sent"}
-
-# ===== Batch =====
 @app.post("/batch-reminders")
 def batch_reminders():
     expiring = (
@@ -210,34 +201,13 @@ def batch_reminders():
         results.append(p["policy_id"])
 
     return {"sent_to": len(results), "policies": results}
-
-# ===== CRM (chat-based) =====
+# =========================
+# CRM (CHAT-BASED)
+# =========================
 @app.post("/crm")
 def crm_endpoint(request: dict):
-    user_input = request["message"]
-    result = run_crm_agent(user_input)
-    return {"response": result, "task_type": "CRM"}
-  
-
-class QuoteRequest(BaseModel):
-    message: str
-    customer_id: str = None
-
-@app.post("/crm")
-async def crm_endpoint(request: QuoteRequest):
-    result = run_crm_agent(request.message)
-    return {"response": result, "task_type": "CRM"}
- 
-
-@app.post("/quote-agent")
-async def quote_agent_endpoint(request: dict):
-    """Quote Agent API."""
     message = request.get("message", "")
-    result = run_quote(message)
-    return {"response": result, "input": message}
-
-@app.post("/policy")
-async def policy_agent_endpoint(request: dict):
-    message = request.get("message", "")
-    result = run_policy_agent(message)
-    return {"response": result, "task_type": "POLICY"}
+    return {
+        "task_type": "CRM",
+        "response": run_crm_agent(message),
+    }
